@@ -45,6 +45,8 @@
 		0290E84719C7926100E516F0 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */; };
 		02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */; };
 		02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008919C7AA8800DCED6F /* Menu@2x.png */; };
+		02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008B19C7ABB600DCED6F /* New@2x.png */; };
+		02CF008F19C7ADC000DCED6F /* ClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,9 @@
 		02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		02CF008919C7AA8800DCED6F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
+		02CF008B19C7ABB600DCED6F /* New@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New@2x.png"; sourceTree = "<group>"; };
+		02CF008D19C7ADC000DCED6F /* ClassTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewCell.h; sourceTree = "<group>"; };
+		02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +229,8 @@
 			children = (
 				0290E7E719C7803000E516F0 /* ActivityView.h */,
 				0290E7E819C7803000E516F0 /* ActivityView.m */,
+				02CF008D19C7ADC000DCED6F /* ClassTableViewCell.h */,
+				02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -239,6 +246,7 @@
 		0290E7EB19C7811B00E516F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				02CF008B19C7ABB600DCED6F /* New@2x.png */,
 				02CF008919C7AA8800DCED6F /* Menu@2x.png */,
 				0290E7EC19C7811B00E516F0 /* Logo-0@2x.png */,
 				0290E7ED19C7811B00E516F0 /* Logo-10@2x.png */,
@@ -391,6 +399,7 @@
 				0290E81A19C7811B00E516F0 /* Logo-6@2x.png in Resources */,
 				0290E81919C7811B00E516F0 /* Logo-5@2x.png in Resources */,
 				0290E81019C7811B00E516F0 /* Logo-11@2x.png in Resources */,
+				02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */,
 				02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */,
 				0290E7B819C77FE200E516F0 /* InfoPlist.strings in Resources */,
 			);
@@ -417,6 +426,7 @@
 				0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */,
 				02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */,
 				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
+				02CF008F19C7ADC000DCED6F /* ClassTableViewCell.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
 				0290E84619C7926100E516F0 /* RECommonFunctions.m in Sources */,

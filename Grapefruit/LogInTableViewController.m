@@ -7,6 +7,7 @@
 //
 
 #import "LogInTableViewController.h"
+#import "HomeTableViewController.h"
 
 @interface LogInTableViewController () <UITextFieldDelegate>
 
@@ -82,6 +83,8 @@
         case 2:
         {
             // TODO: Log the user in.
+            HomeTableViewController *homeTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeTableViewController"];
+            [self.navigationController pushViewController:homeTableViewController animated:YES];
             break;
         }
         case 3:

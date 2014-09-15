@@ -8,6 +8,7 @@
 
 #import "SignUpTableViewController.h"
 #import "LogInTableViewController.h"
+#import "HomeTableViewController.h"
 
 @interface SignUpTableViewController () <UITextFieldDelegate>
 
@@ -98,6 +99,8 @@
         case 4:
         {
             // TODO: Create Account
+            HomeTableViewController *homeTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeTableViewController"];
+            [self.navigationController pushViewController:homeTableViewController animated:YES];
             break;
         }
         case 5:
