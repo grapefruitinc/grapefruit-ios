@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TestViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 9/15/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TestViewController : UIViewController
 
 @end
