@@ -42,6 +42,7 @@
 		0290E83C19C78C0800E516F0 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83719C78C0800E516F0 /* RECommonFunctions.m */; };
 		0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83919C78C0800E516F0 /* RESideMenu.m */; };
 		0290E83E19C78C0800E516F0 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83B19C78C0800E516F0 /* UIViewController+RESideMenu.m */; };
+		0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84019C78E8900E516F0 /* LogInTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		0290E83919C78C0800E516F0 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
 		0290E83A19C78C0800E516F0 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
 		0290E83B19C78C0800E516F0 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		0290E83F19C78E8900E516F0 /* LogInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTableViewController.h; sourceTree = "<group>"; };
+		0290E84019C78E8900E516F0 /* LogInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +257,8 @@
 			children = (
 				0290E83019C783E800E516F0 /* TestViewController.h */,
 				0290E83119C783E800E516F0 /* TestViewController.m */,
+				0290E83F19C78E8900E516F0 /* LogInTableViewController.h */,
+				0290E84019C78E8900E516F0 /* LogInTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
 				0290E83219C783E800E516F0 /* TestViewController.m in Sources */,
 				0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */,
+				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
 				0290E83E19C78C0800E516F0 /* UIViewController+RESideMenu.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
 			);
