@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  SignUpTableViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 9/15/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestViewController : UIViewController
+@interface SignUpTableViewController : UITableViewController
 
 @end

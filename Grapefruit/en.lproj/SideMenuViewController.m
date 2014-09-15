@@ -1,20 +1,18 @@
 //
-//  TestViewController.m
+//  SideMenuViewController.m
 //  Grapefruit
 //
 //  Created by Logan Shire on 9/15/14.
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
-#import "TestViewController.h"
-#import "ActivityView.h"
+#import "SideMenuViewController.h"
 
-@interface TestViewController ()
-@property (weak, nonatomic) IBOutlet ActivityView *activityView;
+@interface SideMenuViewController ()
 
 @end
 
-@implementation TestViewController
+@implementation SideMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +27,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self.activityView startSpinning];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */; };
 		0290E7AE19C77FE100E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
 		0290E7B019C77FE100E516F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */; };
 		0290E7B219C77FE200E516F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7B119C77FE200E516F0 /* UIKit.framework */; };
@@ -38,11 +39,12 @@
 		0290E81B19C7811B00E516F0 /* Logo-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7F919C7811B00E516F0 /* Logo-7@2x.png */; };
 		0290E81C19C7811B00E516F0 /* Logo-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7FA19C7811B00E516F0 /* Logo-8@2x.png */; };
 		0290E81D19C7811B00E516F0 /* Logo-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7FB19C7811B00E516F0 /* Logo-9@2x.png */; };
-		0290E83219C783E800E516F0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83119C783E800E516F0 /* TestViewController.m */; };
-		0290E83C19C78C0800E516F0 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83719C78C0800E516F0 /* RECommonFunctions.m */; };
 		0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83919C78C0800E516F0 /* RESideMenu.m */; };
-		0290E83E19C78C0800E516F0 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83B19C78C0800E516F0 /* UIViewController+RESideMenu.m */; };
 		0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84019C78E8900E516F0 /* LogInTableViewController.m */; };
+		0290E84619C7926100E516F0 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84319C7926100E516F0 /* RECommonFunctions.m */; };
+		0290E84719C7926100E516F0 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */; };
+		02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */; };
+		02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008919C7AA8800DCED6F /* Menu@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpTableViewController.h; sourceTree = "<group>"; };
+		025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpTableViewController.m; sourceTree = "<group>"; };
 		0290E7AA19C77FE100E516F0 /* Grapefruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grapefruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290E7AD19C77FE100E516F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,16 +96,19 @@
 		0290E7F919C7811B00E516F0 /* Logo-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-7@2x.png"; sourceTree = "<group>"; };
 		0290E7FA19C7811B00E516F0 /* Logo-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-8@2x.png"; sourceTree = "<group>"; };
 		0290E7FB19C7811B00E516F0 /* Logo-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-9@2x.png"; sourceTree = "<group>"; };
-		0290E83019C783E800E516F0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		0290E83119C783E800E516F0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		0290E83619C78C0800E516F0 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
-		0290E83719C78C0800E516F0 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		0290E83819C78C0800E516F0 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
 		0290E83919C78C0800E516F0 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
-		0290E83A19C78C0800E516F0 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
-		0290E83B19C78C0800E516F0 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		0290E83F19C78E8900E516F0 /* LogInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTableViewController.h; sourceTree = "<group>"; };
 		0290E84019C78E8900E516F0 /* LogInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTableViewController.m; sourceTree = "<group>"; };
+		0290E84219C7926100E516F0 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		0290E84319C7926100E516F0 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		0290E84419C7926100E516F0 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		0290E84919C7929F00E516F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/SideMenuViewController.h; sourceTree = "<group>"; };
+		0290E84B19C7929F00E516F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/SideMenuViewController.m; sourceTree = "<group>"; };
+		02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		02CF008919C7AA8800DCED6F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +239,7 @@
 		0290E7EB19C7811B00E516F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				02CF008919C7AA8800DCED6F /* Menu@2x.png */,
 				0290E7EC19C7811B00E516F0 /* Logo-0@2x.png */,
 				0290E7ED19C7811B00E516F0 /* Logo-10@2x.png */,
 				0290E7EE19C7811B00E516F0 /* Logo-11@2x.png */,
@@ -255,10 +263,14 @@
 		0290E82F19C7838F00E516F0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0290E83019C783E800E516F0 /* TestViewController.h */,
-				0290E83119C783E800E516F0 /* TestViewController.m */,
+				0290E84819C7929F00E516F0 /* SideMenuViewController.h */,
+				0290E84A19C7929F00E516F0 /* SideMenuViewController.m */,
+				025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */,
+				025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */,
 				0290E83F19C78E8900E516F0 /* LogInTableViewController.h */,
 				0290E84019C78E8900E516F0 /* LogInTableViewController.m */,
+				02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */,
+				02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -274,12 +286,12 @@
 		0290E83519C78C0800E516F0 /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				0290E83619C78C0800E516F0 /* RECommonFunctions.h */,
-				0290E83719C78C0800E516F0 /* RECommonFunctions.m */,
+				0290E84219C7926100E516F0 /* RECommonFunctions.h */,
+				0290E84319C7926100E516F0 /* RECommonFunctions.m */,
+				0290E84419C7926100E516F0 /* UIViewController+RESideMenu.h */,
+				0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */,
 				0290E83819C78C0800E516F0 /* RESideMenu.h */,
 				0290E83919C78C0800E516F0 /* RESideMenu.m */,
-				0290E83A19C78C0800E516F0 /* UIViewController+RESideMenu.h */,
-				0290E83B19C78C0800E516F0 /* UIViewController+RESideMenu.m */,
 			);
 			path = RESideMenu;
 			sourceTree = "<group>";
@@ -379,6 +391,7 @@
 				0290E81A19C7811B00E516F0 /* Logo-6@2x.png in Resources */,
 				0290E81919C7811B00E516F0 /* Logo-5@2x.png in Resources */,
 				0290E81019C7811B00E516F0 /* Logo-11@2x.png in Resources */,
+				02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */,
 				0290E7B819C77FE200E516F0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,13 +412,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */,
-				0290E83C19C78C0800E516F0 /* RECommonFunctions.m in Sources */,
+				0290E84719C7926100E516F0 /* UIViewController+RESideMenu.m in Sources */,
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
-				0290E83219C783E800E516F0 /* TestViewController.m in Sources */,
 				0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */,
+				02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */,
 				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
-				0290E83E19C78C0800E516F0 /* UIViewController+RESideMenu.m in Sources */,
+				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
+				0290E84619C7926100E516F0 /* RECommonFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +472,22 @@
 				0290E7D919C77FE200E516F0 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0290E84819C7929F00E516F0 /* SideMenuViewController.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0290E84919C7929F00E516F0 /* en */,
+			);
+			name = SideMenuViewController.h;
+			sourceTree = "<group>";
+		};
+		0290E84A19C7929F00E516F0 /* SideMenuViewController.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0290E84B19C7929F00E516F0 /* en */,
+			);
+			name = SideMenuViewController.m;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -620,6 +650,7 @@
 				0290E7E119C77FE200E516F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0290E7E219C77FE200E516F0 /* Build configuration list for PBXNativeTarget "GrapefruitTests" */ = {
 			isa = XCConfigurationList;
@@ -628,6 +659,7 @@
 				0290E7E419C77FE200E516F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
