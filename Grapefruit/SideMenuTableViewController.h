@@ -1,5 +1,5 @@
 //
-//  SideMenuViewController.h
+//  SideMenuTableViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 9/15/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SideMenuViewController : UIViewController
+@interface SideMenuTableViewController : UITableViewController
 
 @end

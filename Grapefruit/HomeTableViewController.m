@@ -7,6 +7,7 @@
 //
 
 #import "HomeTableViewController.h"
+#import "ClassTableViewCell.h"
 
 @interface HomeTableViewController ()
 
@@ -30,24 +31,31 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
+    // TODO: Return the number of classes the user is enrolled in.
     return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *reuseIdentifier = @"CellIdentifier";
+    static NSString *reuseIdentifier = @"ClassCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell)
     {
-        
+        cell = [[ClassTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
     
     // Configure the cell...
     
     return cell;
+}
+
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

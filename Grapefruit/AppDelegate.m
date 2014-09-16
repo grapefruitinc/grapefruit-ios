@@ -7,14 +7,39 @@
 //
 
 #import "AppDelegate.h"
-#import "RESideMenu.h"
+#import "SideMenuTableViewController.h"
+#import "SignUpTableViewController.h"
+#import "LogInTableViewController.h"
+#import "HomeTableViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    // Override point for customization after application launch.
+    
+    // Get the storyboard.
+    // TODO: Check if iPad or iPhone
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
+    
+    // Instantiate the view controllers.
+    SideMenuTableViewController *sideMenuTableViewController =
+    [storyboard instantiateViewControllerWithIdentifier:@"SideMenuTableViewController"];
+    
+    // Create the navigaiton controller.
+    UINavigationController *navigationController =
+    [storyboard instantiateViewControllerWithIdentifier:@"MainNavigationController"];
+    
+    // Create side menu controller
+    RESideMenu *sideMenuViewController =
+    [[RESideMenu alloc] initWithContentViewController:navigationController
+                               leftMenuViewController:sideMenuTableViewController
+                              rightMenuViewController:nil];
+    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+    
+    // Make it a root controller
+    self.window.rootViewController = sideMenuViewController;
+    
     return YES;
 }
 							

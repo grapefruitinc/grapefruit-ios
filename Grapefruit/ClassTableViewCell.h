@@ -10,4 +10,8 @@
 
 @interface ClassTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (weak, nonatomic) IBOutlet UILabel *courseTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *courseNumberLabel;
+
 @end

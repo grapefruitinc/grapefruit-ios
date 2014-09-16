@@ -47,6 +47,9 @@
 		02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008919C7AA8800DCED6F /* Menu@2x.png */; };
 		02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008B19C7ABB600DCED6F /* New@2x.png */; };
 		02CF008F19C7ADC000DCED6F /* ClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */; };
+		02CF009119C7B28400DCED6F /* RPI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009019C7B28400DCED6F /* RPI@2x.png */; };
+		02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */; };
+		02CF009619C7DDC800DCED6F /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009519C7DDC800DCED6F /* Back@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,14 +109,16 @@
 		0290E84319C7926100E516F0 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		0290E84419C7926100E516F0 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
 		0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
-		0290E84919C7929F00E516F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = en; path = en.lproj/SideMenuViewController.h; sourceTree = "<group>"; };
-		0290E84B19C7929F00E516F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/SideMenuViewController.m; sourceTree = "<group>"; };
 		02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		02CF008919C7AA8800DCED6F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
 		02CF008B19C7ABB600DCED6F /* New@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New@2x.png"; sourceTree = "<group>"; };
 		02CF008D19C7ADC000DCED6F /* ClassTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewCell.h; sourceTree = "<group>"; };
 		02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewCell.m; sourceTree = "<group>"; };
+		02CF009019C7B28400DCED6F /* RPI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RPI@2x.png"; sourceTree = "<group>"; };
+		02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewController.h; sourceTree = "<group>"; };
+		02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewController.m; sourceTree = "<group>"; };
+		02CF009519C7DDC800DCED6F /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,9 +178,9 @@
 		0290E7B319C77FE200E516F0 /* Grapefruit */ = {
 			isa = PBXGroup;
 			children = (
+				0290E7EA19C7811B00E516F0 /* Assets */,
 				0290E83419C78BFC00E516F0 /* Vendor */,
 				0290E82F19C7838F00E516F0 /* View Controllers */,
-				0290E7EA19C7811B00E516F0 /* Assets */,
 				0290E7E619C77FFE00E516F0 /* Custom Classes */,
 				0290E7E519C77FEC00E516F0 /* Application */,
 			);
@@ -246,6 +251,8 @@
 		0290E7EB19C7811B00E516F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				02CF009519C7DDC800DCED6F /* Back@2x.png */,
+				02CF009019C7B28400DCED6F /* RPI@2x.png */,
 				02CF008B19C7ABB600DCED6F /* New@2x.png */,
 				02CF008919C7AA8800DCED6F /* Menu@2x.png */,
 				0290E7EC19C7811B00E516F0 /* Logo-0@2x.png */,
@@ -271,8 +278,8 @@
 		0290E82F19C7838F00E516F0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0290E84819C7929F00E516F0 /* SideMenuViewController.h */,
-				0290E84A19C7929F00E516F0 /* SideMenuViewController.m */,
+				02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */,
+				02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */,
 				025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */,
 				025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */,
 				0290E83F19C78E8900E516F0 /* LogInTableViewController.h */,
@@ -381,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0290E80E19C7811B00E516F0 /* Logo-0@2x.png in Resources */,
+				02CF009619C7DDC800DCED6F /* Back@2x.png in Resources */,
 				0290E81D19C7811B00E516F0 /* Logo-9@2x.png in Resources */,
 				0290E7C419C77FE200E516F0 /* Main_iPad.storyboard in Resources */,
 				0290E7C919C77FE200E516F0 /* Images.xcassets in Resources */,
@@ -396,6 +404,7 @@
 				0290E81419C7811B00E516F0 /* Logo-15@2x.png in Resources */,
 				0290E81119C7811B00E516F0 /* Logo-12@2x.png in Resources */,
 				0290E80F19C7811B00E516F0 /* Logo-10@2x.png in Resources */,
+				02CF009119C7B28400DCED6F /* RPI@2x.png in Resources */,
 				0290E81A19C7811B00E516F0 /* Logo-6@2x.png in Resources */,
 				0290E81919C7811B00E516F0 /* Logo-5@2x.png in Resources */,
 				0290E81019C7811B00E516F0 /* Logo-11@2x.png in Resources */,
@@ -426,6 +435,7 @@
 				0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */,
 				02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */,
 				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
+				02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */,
 				02CF008F19C7ADC000DCED6F /* ClassTableViewCell.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
@@ -482,22 +492,6 @@
 				0290E7D919C77FE200E516F0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0290E84819C7929F00E516F0 /* SideMenuViewController.h */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0290E84919C7929F00E516F0 /* en */,
-			);
-			name = SideMenuViewController.h;
-			sourceTree = "<group>";
-		};
-		0290E84A19C7929F00E516F0 /* SideMenuViewController.m */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0290E84B19C7929F00E516F0 /* en */,
-			);
-			name = SideMenuViewController.m;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
