@@ -31,14 +31,15 @@
     [storyboard instantiateViewControllerWithIdentifier:@"MainNavigationController"];
     
     // Create side menu controller
-    RESideMenu *sideMenuViewController =
+    self.sideMenuViewController =
     [[RESideMenu alloc] initWithContentViewController:navigationController
                                leftMenuViewController:sideMenuTableViewController
                               rightMenuViewController:nil];
-    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"Stars"];
+//    self.sideMenuViewController.view.backgroundColor = [UIColor colorWithRed:205.0/255.0 green:69.0/255.0 blue:68.0/255.0 alpha:1.0];
+    self.sideMenuViewController.view.backgroundColor = [UIColor colorWithRed:9.0/255.0 green:124.0/255.0 blue:124.0/255.0 alpha:1.0];
     
     // Make it a root controller
-    self.window.rootViewController = sideMenuViewController;
+    self.window.rootViewController = self.sideMenuViewController;
     
     return YES;
 }

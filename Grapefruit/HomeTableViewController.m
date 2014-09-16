@@ -7,9 +7,15 @@
 //
 
 #import "HomeTableViewController.h"
-#import "ClassTableViewCell.h"
+#import "CourseTableViewCell.h"
+#import "CourseTableViewController.h"
+#import "AppDelegate.h"
+#import "RESideMenu.h"
 
 @interface HomeTableViewController ()
+
+- (IBAction)menuButtonPressed:(id)sender;
+- (IBAction)newButtonPressed:(id)sender;
 
 @end
 
@@ -38,12 +44,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *reuseIdentifier = @"ClassCell";
+    static NSString *reuseIdentifier = @"CourseCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell)
     {
-        cell = [[ClassTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+        cell = [[CourseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     }
     
     // Configure the cell...
@@ -56,6 +62,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // TODO: Pull up correct course info.
+    CourseTableViewController *courseTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseTableViewController"];
+    [self.navigationController pushViewController:courseTableViewController animated:YES];
+}
+
+#pragma mark - User Interaction
+
+- (IBAction)menuButtonPressed:(id)sender
+{
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate.sideMenuViewController presentLeftMenuViewController];
+}
+
+- (IBAction)newButtonPressed:(id)sender
+{
+    
 }
 
 @end

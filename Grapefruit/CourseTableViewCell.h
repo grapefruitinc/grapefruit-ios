@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClassTableViewCell : UITableViewCell
+@interface CourseTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
 @property (weak, nonatomic) IBOutlet UILabel *courseTitleLabel;

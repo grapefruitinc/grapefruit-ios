@@ -46,10 +46,11 @@
 		02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */; };
 		02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008919C7AA8800DCED6F /* Menu@2x.png */; };
 		02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008B19C7ABB600DCED6F /* New@2x.png */; };
-		02CF008F19C7ADC000DCED6F /* ClassTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */; };
+		02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008E19C7ADC000DCED6F /* CourseTableViewCell.m */; };
 		02CF009119C7B28400DCED6F /* RPI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009019C7B28400DCED6F /* RPI@2x.png */; };
 		02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */; };
 		02CF009619C7DDC800DCED6F /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009519C7DDC800DCED6F /* Back@2x.png */; };
+		02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,12 +114,14 @@
 		02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		02CF008919C7AA8800DCED6F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
 		02CF008B19C7ABB600DCED6F /* New@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New@2x.png"; sourceTree = "<group>"; };
-		02CF008D19C7ADC000DCED6F /* ClassTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTableViewCell.h; sourceTree = "<group>"; };
-		02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTableViewCell.m; sourceTree = "<group>"; };
+		02CF008D19C7ADC000DCED6F /* CourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewCell.h; sourceTree = "<group>"; };
+		02CF008E19C7ADC000DCED6F /* CourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewCell.m; sourceTree = "<group>"; };
 		02CF009019C7B28400DCED6F /* RPI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RPI@2x.png"; sourceTree = "<group>"; };
 		02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewController.h; sourceTree = "<group>"; };
 		02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewController.m; sourceTree = "<group>"; };
 		02CF009519C7DDC800DCED6F /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
+		02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewController.h; sourceTree = "<group>"; };
+		02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,8 +237,8 @@
 			children = (
 				0290E7E719C7803000E516F0 /* ActivityView.h */,
 				0290E7E819C7803000E516F0 /* ActivityView.m */,
-				02CF008D19C7ADC000DCED6F /* ClassTableViewCell.h */,
-				02CF008E19C7ADC000DCED6F /* ClassTableViewCell.m */,
+				02CF008D19C7ADC000DCED6F /* CourseTableViewCell.h */,
+				02CF008E19C7ADC000DCED6F /* CourseTableViewCell.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -286,6 +289,8 @@
 				0290E84019C78E8900E516F0 /* LogInTableViewController.m */,
 				02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */,
 				02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */,
+				02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */,
+				02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -435,8 +440,9 @@
 				0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */,
 				02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */,
 				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
+				02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */,
 				02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */,
-				02CF008F19C7ADC000DCED6F /* ClassTableViewCell.m in Sources */,
+				02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
 				0290E84619C7926100E516F0 /* RECommonFunctions.m in Sources */,
