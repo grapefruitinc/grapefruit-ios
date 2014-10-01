@@ -7,7 +7,8 @@
 //
 
 #import "SideMenuTableViewController.h"
-#import "RESideMenu.h"
+#import "AppDelegate.h"
+//#import "TWTSideMenuViewController.h"
 
 @interface SideMenuTableViewController ()
 
@@ -67,10 +68,25 @@
     return (self.tableView.frame.size.height - 64*self.menuItems.count)/2.0;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    CGRect frame = CGRectMake(0,0,tableView.frame.size.width,(self.tableView.frame.size.height - 64*self.menuItems.count)/2.0);
+    UIView *headerView = [[UIView alloc] initWithFrame:frame];
+    return headerView;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    CGRect frame = CGRectMake(0,0,tableView.frame.size.width,(self.tableView.frame.size.height - 64*self.menuItems.count)/2.0);
+    UIView *footerView = [[UIView alloc] initWithFrame:frame];
+    return footerView;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    RESideMenu *sideMenuViewController = [[[UIApplication sharedApplication] delegate] presentLeftMenuViewController];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    TWTSideMenuViewController *sideMenuViewController = appDelegate.sideMenuViewController;
     
     switch (indexPath.row)
     {
@@ -97,7 +113,7 @@
             case 4:
         {
             // TODO: Log Out
-            sideMenuTableViewController.SideMenuTableViewController
+//            [sideMenuViewController openMenuAnimated:YES completion:nil];
             break;
         }
         default:

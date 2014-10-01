@@ -275,6 +275,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Log In" id="tIN-Zc-ZMq"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                        <size key="portraitSize" width="320" height="568"/>
+                        <size key="landscapeSize" width="568" height="320"/>
+                    </simulatedScreenMetrics>
                     <connections>
                         <outlet property="emailTextField" destination="KRl-Ld-Uz7" id="gE5-jX-DOy"/>
                         <outlet property="passwordTextField" destination="dbZ-4h-olr" id="N9B-t4-Pud"/>
@@ -388,7 +392,7 @@
                             <color key="backgroundColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3sK-6O-bev">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseCell" id="3sK-6O-bev">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3sK-6O-bev" id="hS1-pI-FE2">
                                     <autoresizingMask key="autoresizingMask"/>

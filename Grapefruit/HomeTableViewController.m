@@ -10,7 +10,7 @@
 #import "CourseTableViewCell.h"
 #import "CourseTableViewController.h"
 #import "AppDelegate.h"
-#import "RESideMenu.h"
+#import "TWTSideMenuViewController.h"
 
 @interface HomeTableViewController ()
 
@@ -73,7 +73,7 @@
 - (IBAction)menuButtonPressed:(id)sender
 {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    [appDelegate.sideMenuViewController presentLeftMenuViewController];
+    [appDelegate.sideMenuViewController openMenuAnimated:YES completion:nil];
 }
 
 - (IBAction)newButtonPressed:(id)sender

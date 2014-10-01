@@ -39,10 +39,7 @@
 		0290E81B19C7811B00E516F0 /* Logo-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7F919C7811B00E516F0 /* Logo-7@2x.png */; };
 		0290E81C19C7811B00E516F0 /* Logo-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7FA19C7811B00E516F0 /* Logo-8@2x.png */; };
 		0290E81D19C7811B00E516F0 /* Logo-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7FB19C7811B00E516F0 /* Logo-9@2x.png */; };
-		0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E83919C78C0800E516F0 /* RESideMenu.m */; };
 		0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84019C78E8900E516F0 /* LogInTableViewController.m */; };
-		0290E84619C7926100E516F0 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84319C7926100E516F0 /* RECommonFunctions.m */; };
-		0290E84719C7926100E516F0 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */; };
 		02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */; };
 		02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008919C7AA8800DCED6F /* Menu@2x.png */; };
 		02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008B19C7ABB600DCED6F /* New@2x.png */; };
@@ -51,6 +48,11 @@
 		02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */; };
 		02CF009619C7DDC800DCED6F /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009519C7DDC800DCED6F /* Back@2x.png */; };
 		02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */; };
+		02CF00A519C8D76800DCED6F /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A019C8D76800DCED6F /* RECommonFunctions.m */; };
+		02CF00A619C8D76800DCED6F /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A219C8D76800DCED6F /* RESideMenu.m */; };
+		02CF00A719C8D76800DCED6F /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */; };
+		02CF00D919C8DCA400DCED6F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00D819C8DCA400DCED6F /* TestViewController.m */; };
+		02CF00DB19C8DDC800DCED6F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF00DA19C8DDC800DCED6F /* Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,14 +104,8 @@
 		0290E7F919C7811B00E516F0 /* Logo-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-7@2x.png"; sourceTree = "<group>"; };
 		0290E7FA19C7811B00E516F0 /* Logo-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-8@2x.png"; sourceTree = "<group>"; };
 		0290E7FB19C7811B00E516F0 /* Logo-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-9@2x.png"; sourceTree = "<group>"; };
-		0290E83819C78C0800E516F0 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
-		0290E83919C78C0800E516F0 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
 		0290E83F19C78E8900E516F0 /* LogInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTableViewController.h; sourceTree = "<group>"; };
 		0290E84019C78E8900E516F0 /* LogInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTableViewController.m; sourceTree = "<group>"; };
-		0290E84219C7926100E516F0 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
-		0290E84319C7926100E516F0 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
-		0290E84419C7926100E516F0 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
-		0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		02CF008919C7AA8800DCED6F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
@@ -122,6 +118,15 @@
 		02CF009519C7DDC800DCED6F /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
 		02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewController.h; sourceTree = "<group>"; };
 		02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewController.m; sourceTree = "<group>"; };
+		02CF009F19C8D76800DCED6F /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		02CF00A019C8D76800DCED6F /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		02CF00A119C8D76800DCED6F /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		02CF00A219C8D76800DCED6F /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		02CF00A319C8D76800DCED6F /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		02CF00D719C8DCA400DCED6F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		02CF00D819C8DCA400DCED6F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		02CF00DA19C8DDC800DCED6F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +259,7 @@
 		0290E7EB19C7811B00E516F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				02CF00DA19C8DDC800DCED6F /* Logo.png */,
 				02CF009519C7DDC800DCED6F /* Back@2x.png */,
 				02CF009019C7B28400DCED6F /* RPI@2x.png */,
 				02CF008B19C7ABB600DCED6F /* New@2x.png */,
@@ -291,6 +297,8 @@
 				02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */,
 				02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */,
 				02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */,
+				02CF00D719C8DCA400DCED6F /* TestViewController.h */,
+				02CF00D819C8DCA400DCED6F /* TestViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -298,22 +306,23 @@
 		0290E83419C78BFC00E516F0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				0290E83519C78C0800E516F0 /* RESideMenu */,
+				02CF009E19C8D76800DCED6F /* RESideMenu */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
 		};
-		0290E83519C78C0800E516F0 /* RESideMenu */ = {
+		02CF009E19C8D76800DCED6F /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				0290E84219C7926100E516F0 /* RECommonFunctions.h */,
-				0290E84319C7926100E516F0 /* RECommonFunctions.m */,
-				0290E84419C7926100E516F0 /* UIViewController+RESideMenu.h */,
-				0290E84519C7926100E516F0 /* UIViewController+RESideMenu.m */,
-				0290E83819C78C0800E516F0 /* RESideMenu.h */,
-				0290E83919C78C0800E516F0 /* RESideMenu.m */,
+				02CF009F19C8D76800DCED6F /* RECommonFunctions.h */,
+				02CF00A019C8D76800DCED6F /* RECommonFunctions.m */,
+				02CF00A119C8D76800DCED6F /* RESideMenu.h */,
+				02CF00A219C8D76800DCED6F /* RESideMenu.m */,
+				02CF00A319C8D76800DCED6F /* UIViewController+RESideMenu.h */,
+				02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */,
 			);
-			path = RESideMenu;
+			name = RESideMenu;
+			path = ../../../RESideMenu/RESideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +423,7 @@
 				0290E81919C7811B00E516F0 /* Logo-5@2x.png in Resources */,
 				0290E81019C7811B00E516F0 /* Logo-11@2x.png in Resources */,
 				02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */,
+				02CF00DB19C8DDC800DCED6F /* Logo.png in Resources */,
 				02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */,
 				0290E7B819C77FE200E516F0 /* InfoPlist.strings in Resources */,
 			);
@@ -435,17 +445,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */,
-				0290E84719C7926100E516F0 /* UIViewController+RESideMenu.m in Sources */,
+				02CF00D919C8DCA400DCED6F /* TestViewController.m in Sources */,
+				02CF00A519C8D76800DCED6F /* RECommonFunctions.m in Sources */,
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
-				0290E83D19C78C0800E516F0 /* RESideMenu.m in Sources */,
+				02CF00A619C8D76800DCED6F /* RESideMenu.m in Sources */,
 				02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */,
+				02CF00A719C8D76800DCED6F /* UIViewController+RESideMenu.m in Sources */,
 				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
 				02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */,
 				02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */,
 				02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
-				0290E84619C7926100E516F0 /* RECommonFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

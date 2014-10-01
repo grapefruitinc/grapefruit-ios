@@ -27,16 +27,15 @@
     [storyboard instantiateViewControllerWithIdentifier:@"SideMenuTableViewController"];
     
     // Create the navigaiton controller.
-    UINavigationController *navigationController =
+    UINavigationController *mainNavigationController =
     [storyboard instantiateViewControllerWithIdentifier:@"MainNavigationController"];
     
     // Create side menu controller
     self.sideMenuViewController =
-    [[RESideMenu alloc] initWithContentViewController:navigationController
+    [[RESideMenu alloc] initWithContentViewController:mainNavigationController
                                leftMenuViewController:sideMenuTableViewController
                               rightMenuViewController:nil];
-//    self.sideMenuViewController.view.backgroundColor = [UIColor colorWithRed:205.0/255.0 green:69.0/255.0 blue:68.0/255.0 alpha:1.0];
-    self.sideMenuViewController.view.backgroundColor = [UIColor colorWithRed:9.0/255.0 green:124.0/255.0 blue:124.0/255.0 alpha:1.0];
+//    self.sideMenuViewController.view.backgroundColor = [UIColor ]
     
     // Make it a root controller
     self.window.rootViewController = self.sideMenuViewController;
