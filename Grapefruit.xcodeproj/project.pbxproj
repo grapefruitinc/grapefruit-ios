@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0246C7DC19E5AD7700518515 /* Message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0246C7DB19E5AD7700518515 /* Message@2x.png */; };
 		025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */; };
 		0290E7AE19C77FE100E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
 		0290E7B019C77FE100E516F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0246C7DB19E5AD7700518515 /* Message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message@2x.png"; sourceTree = "<group>"; };
 		025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpTableViewController.h; sourceTree = "<group>"; };
 		025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpTableViewController.m; sourceTree = "<group>"; };
 		0290E7AA19C77FE100E516F0 /* Grapefruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grapefruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +261,7 @@
 		0290E7EB19C7811B00E516F0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0246C7DB19E5AD7700518515 /* Message@2x.png */,
 				02CF00DA19C8DDC800DCED6F /* Logo.png */,
 				02CF009519C7DDC800DCED6F /* Back@2x.png */,
 				02CF009019C7B28400DCED6F /* RPI@2x.png */,
@@ -413,6 +416,7 @@
 				0290E81519C7811B00E516F0 /* Logo-1@2x.png in Resources */,
 				0290E81219C7811B00E516F0 /* Logo-13@2x.png in Resources */,
 				0290E81719C7811B00E516F0 /* Logo-3@2x.png in Resources */,
+				0246C7DC19E5AD7700518515 /* Message@2x.png in Resources */,
 				0290E81C19C7811B00E516F0 /* Logo-8@2x.png in Resources */,
 				0290E81619C7811B00E516F0 /* Logo-2@2x.png in Resources */,
 				0290E81419C7811B00E516F0 /* Logo-15@2x.png in Resources */,
