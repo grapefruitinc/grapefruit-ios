@@ -1,31 +1,47 @@
 //
-//  HomeTableViewController.m
+//  CourseListTableViewController.m
 //  Grapefruit
 //
-//  Created by Logan Shire on 9/15/14.
+//  Created by Logan Shire on 10/21/14.
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
-#import "HomeTableViewController.h"
+#import "CourseListTableViewController.h"
 #import "CourseTableViewCell.h"
 #import "CourseTableViewController.h"
 #import "AppDelegate.h"
-//#import "TWTSideMenuViewController.h"
+#import "ApiManager.h"
 
-@interface HomeTableViewController ()
-
-- (IBAction)menuButtonPressed:(id)sender;
-- (IBAction)newButtonPressed:(id)sender;
+@interface CourseListTableViewController () <ApiManagerDelegate>
 
 @end
 
-@implementation HomeTableViewController
+@implementation CourseListTableViewController
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    ApiManager *sharedApiManager = [ApiManager sharedInstance];
+    sharedApiManager.delegate = self;
+    [sharedApiManager getCourses];
+}
+
+#pragma mark - ApiManager Delegate
+
+- (void)getCoursesSuccessful
+{
+    [self.tableView reloadData];
+}
+
+- (void)getCoursesFailedWithError:(NSError *)error
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alertView show];
 }
 
 #pragma mark - TableView Data Source
@@ -37,8 +53,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // TODO: Return the number of classes the user is enrolled in.
-    return 1;
+    ApiManager *sharedApiManager = [ApiManager sharedInstance];
+    return sharedApiManager.courses.allKeys.count;
 }
 
 
@@ -66,19 +82,6 @@
     // TODO: Pull up correct course info.
     CourseTableViewController *courseTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseTableViewController"];
     [self.navigationController pushViewController:courseTableViewController animated:YES];
-}
-
-#pragma mark - User Interaction
-
-- (IBAction)menuButtonPressed:(id)sender
-{
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-//    [appDelegate.sideMenuViewController openMenuAnimated:YES completion:nil];
-}
-
-- (IBAction)newButtonPressed:(id)sender
-{
-    
 }
 
 @end

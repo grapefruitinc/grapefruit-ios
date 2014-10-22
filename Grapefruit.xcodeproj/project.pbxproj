@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022C817319F6F00F004F229D /* CourseListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817219F6F00F004F229D /* CourseListTableViewController.m */; };
+		022C817619F6F039004F229D /* AllCoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817519F6F039004F229D /* AllCoursesTableViewController.m */; };
+		022C817919F6F04A004F229D /* MyCoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817819F6F04A004F229D /* MyCoursesTableViewController.m */; };
 		0246C7DC19E5AD7700518515 /* Message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0246C7DB19E5AD7700518515 /* Message@2x.png */; };
 		025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */; };
 		0290E7AE19C77FE100E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
@@ -15,8 +18,7 @@
 		0290E7B819C77FE200E516F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7B619C77FE200E516F0 /* InfoPlist.strings */; };
 		0290E7BA19C77FE200E516F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E7B919C77FE200E516F0 /* main.m */; };
 		0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E7BD19C77FE200E516F0 /* AppDelegate.m */; };
-		0290E7C119C77FE200E516F0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7BF19C77FE200E516F0 /* Main_iPhone.storyboard */; };
-		0290E7C419C77FE200E516F0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7C219C77FE200E516F0 /* Main_iPad.storyboard */; };
+		0290E7C119C77FE200E516F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7BF19C77FE200E516F0 /* Main.storyboard */; };
 		0290E7C919C77FE200E516F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7C819C77FE200E516F0 /* Images.xcassets */; };
 		0290E7D019C77FE200E516F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7CF19C77FE200E516F0 /* XCTest.framework */; };
 		0290E7D119C77FE200E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
@@ -40,8 +42,7 @@
 		0290E81B19C7811B00E516F0 /* Logo-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7F919C7811B00E516F0 /* Logo-7@2x.png */; };
 		0290E81C19C7811B00E516F0 /* Logo-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7FA19C7811B00E516F0 /* Logo-8@2x.png */; };
 		0290E81D19C7811B00E516F0 /* Logo-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0290E7FB19C7811B00E516F0 /* Logo-9@2x.png */; };
-		0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84019C78E8900E516F0 /* LogInTableViewController.m */; };
-		02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */; };
+		0290E84119C78E8900E516F0 /* SignInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290E84019C78E8900E516F0 /* SignInTableViewController.m */; };
 		02CF008A19C7AA8800DCED6F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008919C7AA8800DCED6F /* Menu@2x.png */; };
 		02CF008C19C7ABB600DCED6F /* New@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF008B19C7ABB600DCED6F /* New@2x.png */; };
 		02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF008E19C7ADC000DCED6F /* CourseTableViewCell.m */; };
@@ -54,6 +55,7 @@
 		02CF00A719C8D76800DCED6F /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */; };
 		02CF00D919C8DCA400DCED6F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00D819C8DCA400DCED6F /* TestViewController.m */; };
 		02CF00DB19C8DDC800DCED6F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF00DA19C8DDC800DCED6F /* Logo.png */; };
+		02DBFD6019EC5E350095AAAB /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DBFD5F19EC5E350095AAAB /* ApiManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022C817119F6F00F004F229D /* CourseListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseListTableViewController.h; sourceTree = "<group>"; };
+		022C817219F6F00F004F229D /* CourseListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseListTableViewController.m; sourceTree = "<group>"; };
+		022C817419F6F039004F229D /* AllCoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCoursesTableViewController.h; sourceTree = "<group>"; };
+		022C817519F6F039004F229D /* AllCoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCoursesTableViewController.m; sourceTree = "<group>"; };
+		022C817719F6F04A004F229D /* MyCoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCoursesTableViewController.h; sourceTree = "<group>"; };
+		022C817819F6F04A004F229D /* MyCoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCoursesTableViewController.m; sourceTree = "<group>"; };
 		0246C7DB19E5AD7700518515 /* Message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message@2x.png"; sourceTree = "<group>"; };
 		025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpTableViewController.h; sourceTree = "<group>"; };
 		025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpTableViewController.m; sourceTree = "<group>"; };
@@ -80,8 +88,7 @@
 		0290E7BB19C77FE200E516F0 /* Grapefruit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grapefruit-Prefix.pch"; sourceTree = "<group>"; };
 		0290E7BC19C77FE200E516F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0290E7BD19C77FE200E516F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0290E7C019C77FE200E516F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		0290E7C319C77FE200E516F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		0290E7C019C77FE200E516F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0290E7C819C77FE200E516F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0290E7CE19C77FE200E516F0 /* GrapefruitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrapefruitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290E7CF19C77FE200E516F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -106,10 +113,9 @@
 		0290E7F919C7811B00E516F0 /* Logo-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-7@2x.png"; sourceTree = "<group>"; };
 		0290E7FA19C7811B00E516F0 /* Logo-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-8@2x.png"; sourceTree = "<group>"; };
 		0290E7FB19C7811B00E516F0 /* Logo-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-9@2x.png"; sourceTree = "<group>"; };
-		0290E83F19C78E8900E516F0 /* LogInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInTableViewController.h; sourceTree = "<group>"; };
-		0290E84019C78E8900E516F0 /* LogInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInTableViewController.m; sourceTree = "<group>"; };
-		02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
-		02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		0290E83F19C78E8900E516F0 /* SignInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInTableViewController.h; sourceTree = "<group>"; };
+		0290E84019C78E8900E516F0 /* SignInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInTableViewController.m; sourceTree = "<group>"; };
+		02C1785419F1B8EA00CBA4B6 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		02CF008919C7AA8800DCED6F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
 		02CF008B19C7ABB600DCED6F /* New@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New@2x.png"; sourceTree = "<group>"; };
 		02CF008D19C7ADC000DCED6F /* CourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewCell.h; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 		02CF00D719C8DCA400DCED6F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		02CF00D819C8DCA400DCED6F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		02CF00DA19C8DDC800DCED6F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		02DBFD5E19EC5E350095AAAB /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		02DBFD5F19EC5E350095AAAB /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022C817019F6EFE7004F229D /* Welcome Flow */ = {
+			isa = PBXGroup;
+			children = (
+				025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */,
+				025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */,
+				0290E83F19C78E8900E516F0 /* SignInTableViewController.h */,
+				0290E84019C78E8900E516F0 /* SignInTableViewController.m */,
+			);
+			name = "Welcome Flow";
+			sourceTree = "<group>";
+		};
+		022C817A19F6F050004F229D /* Course Lists */ = {
+			isa = PBXGroup;
+			children = (
+				022C817119F6F00F004F229D /* CourseListTableViewController.h */,
+				022C817219F6F00F004F229D /* CourseListTableViewController.m */,
+				022C817419F6F039004F229D /* AllCoursesTableViewController.h */,
+				022C817519F6F039004F229D /* AllCoursesTableViewController.m */,
+				022C817719F6F04A004F229D /* MyCoursesTableViewController.h */,
+				022C817819F6F04A004F229D /* MyCoursesTableViewController.m */,
+			);
+			name = "Course Lists";
+			sourceTree = "<group>";
+		};
 		0290E7A119C77FE100E516F0 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +222,7 @@
 			children = (
 				0290E7EA19C7811B00E516F0 /* Assets */,
 				0290E83419C78BFC00E516F0 /* Vendor */,
+				02DBFD5D19EC5E1C0095AAAB /* Managers */,
 				0290E82F19C7838F00E516F0 /* View Controllers */,
 				0290E7E619C77FFE00E516F0 /* Custom Classes */,
 				0290E7E519C77FEC00E516F0 /* Application */,
@@ -229,10 +262,10 @@
 		0290E7E519C77FEC00E516F0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				02C1785419F1B8EA00CBA4B6 /* Common.h */,
 				0290E7BC19C77FE200E516F0 /* AppDelegate.h */,
 				0290E7BD19C77FE200E516F0 /* AppDelegate.m */,
-				0290E7BF19C77FE200E516F0 /* Main_iPhone.storyboard */,
-				0290E7C219C77FE200E516F0 /* Main_iPad.storyboard */,
+				0290E7BF19C77FE200E516F0 /* Main.storyboard */,
 				0290E7C819C77FE200E516F0 /* Images.xcassets */,
 				0290E7B419C77FE200E516F0 /* Supporting Files */,
 			);
@@ -290,16 +323,12 @@
 		0290E82F19C7838F00E516F0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */,
-				02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */,
-				025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */,
-				025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */,
-				0290E83F19C78E8900E516F0 /* LogInTableViewController.h */,
-				0290E84019C78E8900E516F0 /* LogInTableViewController.m */,
-				02CF008619C7A9AD00DCED6F /* HomeTableViewController.h */,
-				02CF008719C7A9AD00DCED6F /* HomeTableViewController.m */,
+				022C817019F6EFE7004F229D /* Welcome Flow */,
+				022C817A19F6F050004F229D /* Course Lists */,
 				02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */,
 				02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */,
+				02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */,
+				02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */,
 				02CF00D719C8DCA400DCED6F /* TestViewController.h */,
 				02CF00D819C8DCA400DCED6F /* TestViewController.m */,
 			);
@@ -326,6 +355,15 @@
 			);
 			name = RESideMenu;
 			path = ../../../RESideMenu/RESideMenu;
+			sourceTree = "<group>";
+		};
+		02DBFD5D19EC5E1C0095AAAB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				02DBFD5E19EC5E350095AAAB /* ApiManager.h */,
+				02DBFD5F19EC5E350095AAAB /* ApiManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,10 +445,9 @@
 				0290E80E19C7811B00E516F0 /* Logo-0@2x.png in Resources */,
 				02CF009619C7DDC800DCED6F /* Back@2x.png in Resources */,
 				0290E81D19C7811B00E516F0 /* Logo-9@2x.png in Resources */,
-				0290E7C419C77FE200E516F0 /* Main_iPad.storyboard in Resources */,
 				0290E7C919C77FE200E516F0 /* Images.xcassets in Resources */,
 				0290E81819C7811B00E516F0 /* Logo-4@2x.png in Resources */,
-				0290E7C119C77FE200E516F0 /* Main_iPhone.storyboard in Resources */,
+				0290E7C119C77FE200E516F0 /* Main.storyboard in Resources */,
 				0290E81B19C7811B00E516F0 /* Logo-7@2x.png in Resources */,
 				0290E81319C7811B00E516F0 /* Logo-14@2x.png in Resources */,
 				0290E81519C7811B00E516F0 /* Logo-1@2x.png in Resources */,
@@ -448,18 +485,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DBFD6019EC5E350095AAAB /* ApiManager.m in Sources */,
+				022C817319F6F00F004F229D /* CourseListTableViewController.m in Sources */,
 				0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */,
 				02CF00D919C8DCA400DCED6F /* TestViewController.m in Sources */,
 				02CF00A519C8D76800DCED6F /* RECommonFunctions.m in Sources */,
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
 				02CF00A619C8D76800DCED6F /* RESideMenu.m in Sources */,
-				02CF008819C7A9AD00DCED6F /* HomeTableViewController.m in Sources */,
+				022C817919F6F04A004F229D /* MyCoursesTableViewController.m in Sources */,
 				02CF00A719C8D76800DCED6F /* UIViewController+RESideMenu.m in Sources */,
-				0290E84119C78E8900E516F0 /* LogInTableViewController.m in Sources */,
+				0290E84119C78E8900E516F0 /* SignInTableViewController.m in Sources */,
 				02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */,
 				02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */,
 				02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
+				022C817619F6F039004F229D /* AllCoursesTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,20 +531,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0290E7BF19C77FE200E516F0 /* Main_iPhone.storyboard */ = {
+		0290E7BF19C77FE200E516F0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0290E7C019C77FE200E516F0 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		0290E7C219C77FE200E516F0 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0290E7C319C77FE200E516F0 /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		0290E7D819C77FE200E516F0 /* InfoPlist.strings */ = {
@@ -598,6 +630,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grapefruit/Grapefruit-Prefix.pch";
 				INFOPLIST_FILE = "Grapefruit/Grapefruit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -611,6 +644,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Grapefruit/Grapefruit-Prefix.pch";
 				INFOPLIST_FILE = "Grapefruit/Grapefruit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

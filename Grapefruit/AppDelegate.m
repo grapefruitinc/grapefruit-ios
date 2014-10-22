@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import "SideMenuTableViewController.h"
 #import "SignUpTableViewController.h"
-#import "LogInTableViewController.h"
-#import "HomeTableViewController.h"
+#import "SignInTableViewController.h"
+//#import "HomeTableViewController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +20,7 @@
     
     // Get the storyboard.
     // TODO: Check if iPad or iPhone
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:[NSBundle mainBundle]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
     // Instantiate the view controllers.
     SideMenuTableViewController *sideMenuTableViewController =

@@ -6,17 +6,18 @@
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
-#import "LogInTableViewController.h"
-#import "HomeTableViewController.h"
+#import "SignInTableViewController.h"
+#import "MyCoursesTableViewController.h"
+#import "ApiManager.h"
 
-@interface LogInTableViewController () <UITextFieldDelegate>
+@interface SignInTableViewController () <UITextFieldDelegate, ApiManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
-@implementation LogInTableViewController
+@implementation SignInTableViewController
 
 - (void)viewDidLoad
 {
@@ -83,8 +84,9 @@
         case 2:
         {
             // TODO: Log the user in.
-            HomeTableViewController *homeTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeTableViewController"];
-            [self.navigationController pushViewController:homeTableViewController animated:YES];
+            ApiManager *sharedApiManager = [ApiManager sharedInstance];
+            sharedApiManager.delegate = self;
+            [sharedApiManager signInWithEmail:self.emailTextField.text password:self.passwordTextField.text];
             break;
         }
         case 3:
@@ -95,4 +97,47 @@
     }
 }
 
+#pragma mark - ApiManager Delegate
+
+- (void)signInSuccessful
+{
+    MyCoursesTableViewController *myCoursesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCoursesTableViewController"];
+    [self.navigationController showViewController:myCoursesTableViewController sender:self];
+}
+
+- (void)signInFailedWithError:(NSError *)error
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alertView show];
+}
+
+#pragma mark - Helper Functions
+
+- (BOOL)isValid
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    if ([self.emailTextField.text isEqualToString:@""])
+    {
+        alertView.message = @"Please enter your email address.";
+        [alertView show];
+        return NO;
+    }
+    if (self.passwordTextField.text.length < 8)
+    {
+        alertView.message = @"Your password must be at least 8 characters.";
+        [alertView show];
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)isValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
+}
 @end

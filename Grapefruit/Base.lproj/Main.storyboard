@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d0V-cn-R0N">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -190,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="-316" y="164"/>
         </scene>
-        <!--Log In-->
+        <!--Sign In-->
         <scene sceneID="FUe-mG-VUO">
             <objects>
-                <tableViewController storyboardIdentifier="LogInTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Njq-zO-U5l" customClass="LogInTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SignInTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Njq-zO-U5l" customClass="SignInTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="32" sectionFooterHeight="32" id="PJL-cU-nQ6">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,7 +272,7 @@
                             <outlet property="delegate" destination="Njq-zO-U5l" id="nX5-vK-uas"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Log In" id="tIN-Zc-ZMq"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="tIN-Zc-ZMq"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -285,10 +284,10 @@
             </objects>
             <point key="canvasLocation" x="436" y="164"/>
         </scene>
-        <!--Home-->
+        <!--My Courses-->
         <scene sceneID="9AQ-Ni-4Af">
             <objects>
-                <tableViewController storyboardIdentifier="HomeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f2k-A6-Y2f" customClass="HomeTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MyCoursesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f2k-A6-Y2f" customClass="MyCoursesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="32" sectionFooterHeight="32" id="H76-qr-b3R">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,13 +348,15 @@
                             <outlet property="delegate" destination="f2k-A6-Y2f" id="R66-eY-IPv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="bxb-nE-5i9">
+                    <navigationItem key="navigationItem" title="My Courses" id="bxb-nE-5i9">
                         <barButtonItem key="leftBarButtonItem" image="Menu.png" id="Hbj-6t-btW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="menuButtonPressed:" destination="f2k-A6-Y2f" id="38t-dX-5gz"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="New.png" id="Zce-WD-kpx">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="newButtonPressed:" destination="f2k-A6-Y2f" id="gRi-dL-hEn"/>
                             </connections>
@@ -371,20 +372,22 @@
         <scene sceneID="qOT-Oy-1zc">
             <objects>
                 <tableViewController storyboardIdentifier="CourseTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bkd-ip-SaB" customClass="CourseTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DPY-xz-mAi">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" id="DPY-xz-mAi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="CJb-a0-gmy">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In Grapefruit, courses have Capsules (like units, or chapters in a textbook) which are then divided into Lectures." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-4W-drl">
-                                    <rect key="frame" x="8" y="8" width="304" height="110"/>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-tU-OYX">
+                                    <rect key="frame" x="8" y="8" width="304" height="80"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <state key="normal" title="Join Course">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
@@ -393,6 +396,17 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3sK-6O-bev" id="hS1-pI-FE2">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RPI.png" translatesAutoresizingMaskIntoConstraints="NO" id="0mt-2u-gFe">
+                                            <rect key="frame" x="16" y="16" width="64" height="64"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-ha-l2g">
+                                            <rect key="frame" x="96" y="32" width="208" height="32"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

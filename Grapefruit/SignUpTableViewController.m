@@ -7,10 +7,11 @@
 //
 
 #import "SignUpTableViewController.h"
-#import "LogInTableViewController.h"
-#import "HomeTableViewController.h"
+#import "SignInTableViewController.h"
+#import "MyCoursesTableViewController.h"
+#import "ApiManager.h"
 
-@interface SignUpTableViewController () <UITextFieldDelegate>
+@interface SignUpTableViewController () <UITextFieldDelegate, ApiManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -34,6 +35,13 @@
     self.passwordTextField.delegate =
     self.confirmPasswordTextField.delegate = self;
     [self.nameTextField becomeFirstResponder];
+    
+    ApiManager *sharedApiManager = [ApiManager sharedInstance];
+    if (sharedApiManager.userID)
+    {
+        MyCoursesTableViewController *myCoursesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCoursesTableViewController"];
+        [self.navigationController showViewController:myCoursesTableViewController sender:self];
+    }
 }
 
 #pragma mark - TextField Delegate
@@ -98,18 +106,84 @@
         }
         case 4:
         {
-            // TODO: Create Account
-            HomeTableViewController *homeTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeTableViewController"];
-            [self.navigationController pushViewController:homeTableViewController animated:YES];
+            // TODO: Validate Fields
+            if ([self isValid])
+            {
+                ApiManager *sharedApiManager = [ApiManager sharedInstance];
+                sharedApiManager.delegate = self;
+                [sharedApiManager signUpWithEmail:self.emailTextField.text password:self.passwordTextField.text name:self.nameTextField.text];
+            }
             break;
         }
         case 5:
         {
-            LogInTableViewController *logInTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LogInTableViewController"];
-            [self.navigationController pushViewController:logInTableViewController animated:YES];
+            SignInTableViewController *logInTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInTableViewController"];
+            [self.navigationController showViewController:logInTableViewController sender:self];
             break;
         }
     }
+}
+
+#pragma mark - ApiManager Delegate
+
+- (void)signUpSuccessful
+{
+    MyCoursesTableViewController *myCoursesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCoursesTableViewController"];
+    [self.navigationController showViewController:myCoursesTableViewController sender:self];
+}
+
+- (void)signUpFailedWithError:(NSError *)error
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alertView show];
+}
+
+#pragma mark - Helper Functions
+
+- (BOOL)isValid
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    if ([self.nameTextField.text isEqualToString:@""])
+    {
+        alertView.message = @"Please enter your name.";
+        [alertView show];
+        return NO;
+    }
+    if ([self.emailTextField.text isEqualToString:@""])
+    {
+        alertView.message = @"Please enter your email address.";
+        [alertView show];
+        return NO;
+    }
+    if (![self isValidEmail:self.emailTextField.text])
+    {
+        alertView.message = @"Please enter a valid email address.";
+        [alertView show];
+        return NO;
+    }
+    if (self.passwordTextField.text.length < 8)
+    {
+        alertView.message = @"Your password must be at least 8 characters.";
+        [alertView show];
+        return NO;
+    }
+    if (![self.passwordTextField.text isEqualToString:self.confirmPasswordTextField.text])
+    {
+        alertView.message = @"The passwords must match.";
+        [alertView show];
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)isValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
 }
 
 @end
