@@ -68,7 +68,7 @@
     [self.request setHTTPMethod:@"POST"];
     NSDictionary *userDictionary = @{@"email":email, @"password":password,@"name":name};
     NSDictionary *postDictionary = @{@"user":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
     [self.request setHTTPBody:jsonData];
     self.apiCall = @"sign_up";
     self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
@@ -81,7 +81,7 @@
     [self.request setHTTPMethod:@"POST"];
     NSDictionary *userDictionary = @{@"email":email, @"password":password};
     NSDictionary *postDictionary = @{@"user":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
     [self.request setHTTPBody:jsonData];
     self.apiCall = @"sign_in";
     self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
@@ -92,9 +92,9 @@
     NSURL *signOutUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_out"]];
     [self.request setURL:signOutUrl];
     [self.request setHTTPMethod:@"DELETE"];
-    NSDictionary *userDictionary = @{@"email":self.email, @"token":self.authenticationToken};
-    NSDictionary *postDictionary = @{@"authentication":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    NSDictionary *userDictionary = @{@"email":self.email, @"authentication_token":self.authenticationToken};
+    NSDictionary *postDictionary = @{@"authentication_data":userDictionary};
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
     [self.request setHTTPBody:jsonData];
     self.apiCall = @"sign_out";
     self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
@@ -105,13 +105,12 @@
     NSURL *coursesUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"courses"]];
     [self.request setURL:coursesUrl];
     [self.request setHTTPMethod:@"GET"];
-    NSDictionary *userDictionary = @{@"email":self.email, @"token":self.authenticationToken};
-    NSDictionary *postDictionary = @{@"authentication":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *string = [[NSString alloc] initWithData:jsonData encoding:NSStringEncodingConversionAllowLossy];
-    NSLog(@"%@", string);
+    NSDictionary *userDictionary = @{@"email":self.email, @"authentication_token":self.authenticationToken};
+    NSDictionary *postDictionary = @{@"authentication_data":userDictionary};
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
     [self.request setHTTPBody:jsonData];
     self.apiCall = @"courses";
+    NSLog(@"%@", self.request);
     self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
 }
 
@@ -139,10 +138,10 @@
     self.mutableData = [NSMutableData new];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    NSLog(@"%@", response);
-}
+//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+//{
+//    NSLog(@"%@", response);
+//}
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
