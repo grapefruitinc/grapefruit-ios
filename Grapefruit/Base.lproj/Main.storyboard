@@ -583,16 +583,34 @@
         <scene sceneID="dJE-KF-pMw">
             <objects>
                 <tableViewController storyboardIdentifier="CapsuleIndexTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nfU-83-c5L" customClass="CapsuleIndexTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" id="AZn-3a-Zyh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="AZn-3a-Zyh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CEi-Hs-GlS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CapsuleNameCell" id="CEi-Hs-GlS" customClass="CapsuleNameTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CEi-Hs-GlS" id="TJL-Cd-Mw9">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capsule Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoF-L9-LPU">
+                                            <rect key="frame" x="8" y="8" width="304" height="48"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="VoF-L9-LPU" secondAttribute="bottom" constant="8" id="2Iu-KC-kZX"/>
+                                        <constraint firstItem="VoF-L9-LPU" firstAttribute="top" secondItem="TJL-Cd-Mw9" secondAttribute="top" constant="8" id="7tN-6O-0tg"/>
+                                        <constraint firstAttribute="trailing" secondItem="VoF-L9-LPU" secondAttribute="trailing" constant="8" id="X9I-mZ-N20"/>
+                                        <constraint firstItem="VoF-L9-LPU" firstAttribute="leading" secondItem="TJL-Cd-Mw9" secondAttribute="leading" constant="8" id="XBp-jd-OPK"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="capsuleNameLabel" destination="VoF-L9-LPU" id="Qls-zX-qlY"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -614,10 +632,10 @@
             </objects>
             <point key="canvasLocation" x="1628" y="164"/>
         </scene>
-        <!--Capsule Information-->
+        <!--Lecture Index-->
         <scene sceneID="N6e-Il-IUe">
             <objects>
-                <tableViewController storyboardIdentifier="CapsuleInformationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2c-HC-vsZ" customClass="CapsuleInformationTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LectureIndexTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2c-HC-vsZ" customClass="LectureIndexTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y72-wO-aps">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -628,10 +646,10 @@
                             <outlet property="delegate" destination="B2c-HC-vsZ" id="gtZ-71-LL2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Capsule Information" id="V6w-x7-uvh">
+                    <navigationItem key="navigationItem" title="Lecture Index" id="V6w-x7-uvh">
                         <barButtonItem key="leftBarButtonItem" image="Back.png" id="AVh-Dp-zWM">
                             <connections>
-                                <action selector="backButtonPressed:" destination="B2c-HC-vsZ" id="eqh-Xa-Ud5"/>
+                                <action selector="backButtonPressed:" destination="B2c-HC-vsZ" id="y6b-jt-SxS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

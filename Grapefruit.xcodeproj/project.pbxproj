@@ -10,7 +10,9 @@
 		022C817319F6F00F004F229D /* CourseIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817219F6F00F004F229D /* CourseIndexTableViewController.m */; };
 		0246C7DC19E5AD7700518515 /* Message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0246C7DB19E5AD7700518515 /* Message@2x.png */; };
 		025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */; };
-		0283139E1A25065B008302D2 /* CapsuleInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0283139D1A25065B008302D2 /* CapsuleInformationTableViewController.m */; };
+		028313A11A2510CE008302D2 /* CapsuleNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A01A2510CE008302D2 /* CapsuleNameTableViewCell.m */; };
+		028313A41A251B72008302D2 /* LectureIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A31A251B72008302D2 /* LectureIndexTableViewController.m */; };
+		028313A81A251BC9008302D2 /* LectureInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A71A251BC9008302D2 /* LectureInformationTableViewController.m */; };
 		0290E7AE19C77FE100E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
 		0290E7B019C77FE100E516F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */; };
 		0290E7B219C77FE200E516F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7B119C77FE200E516F0 /* UIKit.framework */; };
@@ -70,8 +72,12 @@
 		0246C7DB19E5AD7700518515 /* Message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message@2x.png"; sourceTree = "<group>"; };
 		025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpTableViewController.h; sourceTree = "<group>"; };
 		025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpTableViewController.m; sourceTree = "<group>"; };
-		0283139C1A25065B008302D2 /* CapsuleInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapsuleInformationTableViewController.h; sourceTree = "<group>"; };
-		0283139D1A25065B008302D2 /* CapsuleInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapsuleInformationTableViewController.m; sourceTree = "<group>"; };
+		0283139F1A2510CE008302D2 /* CapsuleNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapsuleNameTableViewCell.h; sourceTree = "<group>"; };
+		028313A01A2510CE008302D2 /* CapsuleNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapsuleNameTableViewCell.m; sourceTree = "<group>"; };
+		028313A21A251B72008302D2 /* LectureIndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureIndexTableViewController.h; sourceTree = "<group>"; };
+		028313A31A251B72008302D2 /* LectureIndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureIndexTableViewController.m; sourceTree = "<group>"; };
+		028313A61A251BC9008302D2 /* LectureInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureInformationTableViewController.h; sourceTree = "<group>"; };
+		028313A71A251BC9008302D2 /* LectureInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureInformationTableViewController.m; sourceTree = "<group>"; };
 		0290E7AA19C77FE100E516F0 /* Grapefruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grapefruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290E7AD19C77FE100E516F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +179,17 @@
 			name = Courses;
 			sourceTree = "<group>";
 		};
+		028313A51A251B7A008302D2 /* Lectures */ = {
+			isa = PBXGroup;
+			children = (
+				028313A21A251B72008302D2 /* LectureIndexTableViewController.h */,
+				028313A31A251B72008302D2 /* LectureIndexTableViewController.m */,
+				028313A61A251BC9008302D2 /* LectureInformationTableViewController.h */,
+				028313A71A251BC9008302D2 /* LectureInformationTableViewController.m */,
+			);
+			name = Lectures;
+			sourceTree = "<group>";
+		};
 		0290E7A119C77FE100E516F0 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +282,8 @@
 				0290E7E819C7803000E516F0 /* ActivityView.m */,
 				02CF008D19C7ADC000DCED6F /* CourseTableViewCell.h */,
 				02CF008E19C7ADC000DCED6F /* CourseTableViewCell.m */,
+				0283139F1A2510CE008302D2 /* CapsuleNameTableViewCell.h */,
+				028313A01A2510CE008302D2 /* CapsuleNameTableViewCell.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -312,6 +331,7 @@
 				022C817019F6EFE7004F229D /* Welcome Flow */,
 				022C817A19F6F050004F229D /* Courses */,
 				02DA729E1A12FAE700F08C63 /* Capsules */,
+				028313A51A251B7A008302D2 /* Lectures */,
 				02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */,
 				02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */,
 			);
@@ -330,8 +350,6 @@
 			children = (
 				02DA729F1A12FB1D00F08C63 /* CapsuleIndexTableViewController.h */,
 				02DA72A01A12FB1D00F08C63 /* CapsuleIndexTableViewController.m */,
-				0283139C1A25065B008302D2 /* CapsuleInformationTableViewController.h */,
-				0283139D1A25065B008302D2 /* CapsuleInformationTableViewController.m */,
 			);
 			name = Capsules;
 			sourceTree = "<group>";
@@ -465,17 +483,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DBFD6019EC5E350095AAAB /* ApiManager.m in Sources */,
+				028313A41A251B72008302D2 /* LectureIndexTableViewController.m in Sources */,
 				022C817319F6F00F004F229D /* CourseIndexTableViewController.m in Sources */,
 				0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */,
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
 				0290E84119C78E8900E516F0 /* SignInTableViewController.m in Sources */,
 				02CF009919C7DF4F00DCED6F /* CourseInformationTableViewController.m in Sources */,
 				02DA72A11A12FB1D00F08C63 /* CapsuleIndexTableViewController.m in Sources */,
+				028313A11A2510CE008302D2 /* CapsuleNameTableViewCell.m in Sources */,
 				02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */,
 				02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */,
+				028313A81A251BC9008302D2 /* LectureInformationTableViewController.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
-				0283139E1A25065B008302D2 /* CapsuleInformationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

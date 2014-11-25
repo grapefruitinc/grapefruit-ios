@@ -8,7 +8,8 @@
 
 #import "CapsuleIndexTableViewController.h"
 #import "ApiManager.h"
-#import "CapsuleInformationTableViewController.h"
+#import "CapsuleNameTableViewCell.h"
+#import "LectureIndexTableViewController.h"
 
 @interface CapsuleIndexTableViewController() <ApiManagerDelegate>
 
@@ -26,6 +27,7 @@
     [super viewDidLoad];
     
     self.capsules = [NSArray new];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.sharedApiManager = [ApiManager sharedInstance];
     self.sharedApiManager.delegate = self;
@@ -59,14 +61,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString *cellIdentifier = @"CourseCell";
+    static NSString *cellIdentifier = @"CapsuleNameCell";
     
-//    CourseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//    
-//    NSDictionary *capsule = self.capsules[indexPath.row][@"capsule"];
-//    cell.courseTitleLabel.text = capsule[@"name"];
+    CapsuleNameTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    return nil;
+    NSDictionary *capsule = self.capsules[indexPath.row];
+    cell.capsuleNameLabel.text = capsule[@"name"];
+    
+    return cell;
 }
 
 #pragma mark - TableView Delegate
@@ -75,12 +77,18 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    NSDictionary *capsule = self.capsules[indexPath.row];
-    // TODO: Load capsule[@"id"];
+    NSDictionary *capsule = self.capsules[indexPath.row];
+    NSInteger capsuleID = [capsule[@"id"] integerValue];
+    
+    LectureIndexTableViewController *lectureIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LectureIndexTableViewController"];
+    lectureIndexTableViewController.courseID = self.courseID;
+    lectureIndexTableViewController.capsuleID = capsuleID;
+    [self.navigationController showViewController:lectureIndexTableViewController sender:self];
 }
 
 - (IBAction)backButtonPressed:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 @end

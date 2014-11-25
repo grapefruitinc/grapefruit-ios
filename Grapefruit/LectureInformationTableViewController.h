@@ -1,5 +1,5 @@
 //
-//  CapsuleTableViewController.h
+//  LectureInformationTableViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 11/25/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CapsuleInformationTableViewController : UITableViewController
+@interface LectureInformationTableViewController : UITableViewController
 
 @end

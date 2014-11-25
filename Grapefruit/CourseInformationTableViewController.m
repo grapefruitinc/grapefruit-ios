@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     self.sharedApiManager = [ApiManager sharedInstance];
     self.sharedApiManager.delegate = self;
     [self.sharedApiManager getCourseInformation:self.courseID];

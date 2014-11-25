@@ -1,18 +1,18 @@
 //
-//  CapsuleTableViewController.m
+//  LectureInformationTableViewController.m
 //  Grapefruit
 //
 //  Created by Logan Shire on 11/25/14.
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
-#import "CapsuleInformationTableViewController.h"
+#import "LectureInformationTableViewController.h"
 
-@interface CapsuleInformationTableViewController ()
+@interface LectureInformationTableViewController ()
 
 @end
 
-@implementation CapsuleInformationTableViewController
+@implementation LectureInformationTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +22,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source

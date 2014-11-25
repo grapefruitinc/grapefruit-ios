@@ -135,7 +135,7 @@
 - (void)getCapsuleInformation:(NSInteger)courseID capsule:(NSInteger)capsuleID
 {
     self.apiCall = @"capsule_information";
-    NSURL *capsuleInformationUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/courses/%ld/capsule/%ld", BASE_URL, (long)courseID, (long)capsuleID]];
+    NSURL *capsuleInformationUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/courses/%ld/capsules/%ld", BASE_URL, (long)courseID, (long)capsuleID]];
     NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
     NSURLRequest *request = [self requestWithURL:capsuleInformationUrl method:@"GET" header:headerDictionary body:nil];
     [NSURLConnection connectionWithRequest:request delegate:self];
