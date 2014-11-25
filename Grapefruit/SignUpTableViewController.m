@@ -8,7 +8,7 @@
 
 #import "SignUpTableViewController.h"
 #import "SignInTableViewController.h"
-#import "MyCoursesTableViewController.h"
+#import "CourseIndexTableViewController.h"
 #import "ApiManager.h"
 
 @interface SignUpTableViewController () <UITextFieldDelegate, ApiManagerDelegate>
@@ -39,8 +39,8 @@
     ApiManager *sharedApiManager = [ApiManager sharedInstance];
     if (sharedApiManager.userID)
     {
-        MyCoursesTableViewController *myCoursesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCoursesTableViewController"];
-        [self.navigationController showViewController:myCoursesTableViewController sender:self];
+        CourseIndexTableViewController *courseIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseIndexTableViewController"];
+        [self.navigationController showViewController:courseIndexTableViewController sender:self];
     }
 }
 
@@ -128,8 +128,8 @@
 
 - (void)signUpSuccessful
 {
-    MyCoursesTableViewController *myCoursesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCoursesTableViewController"];
-    [self.navigationController showViewController:myCoursesTableViewController sender:self];
+    CourseIndexTableViewController *courseIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseIndexTableViewController"];
+    [self.navigationController showViewController:courseIndexTableViewController sender:self];
 }
 
 - (void)signUpFailedWithError:(NSError *)error

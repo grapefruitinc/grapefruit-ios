@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CourseTableViewController : UITableViewController
+@interface CourseInformationTableViewController : UITableViewController
+
+@property (nonatomic) NSInteger courseID;
 
 @end

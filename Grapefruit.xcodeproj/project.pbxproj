@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		022C817319F6F00F004F229D /* CourseListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817219F6F00F004F229D /* CourseListTableViewController.m */; };
-		022C817619F6F039004F229D /* AllCoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817519F6F039004F229D /* AllCoursesTableViewController.m */; };
-		022C817919F6F04A004F229D /* MyCoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817819F6F04A004F229D /* MyCoursesTableViewController.m */; };
+		022C817319F6F00F004F229D /* CourseIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022C817219F6F00F004F229D /* CourseIndexTableViewController.m */; };
 		0246C7DC19E5AD7700518515 /* Message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0246C7DB19E5AD7700518515 /* Message@2x.png */; };
 		025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */; };
+		0283139E1A25065B008302D2 /* CapsuleInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0283139D1A25065B008302D2 /* CapsuleInformationTableViewController.m */; };
 		0290E7AE19C77FE100E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
 		0290E7B019C77FE100E516F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */; };
 		0290E7B219C77FE200E516F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7B119C77FE200E516F0 /* UIKit.framework */; };
@@ -49,12 +48,9 @@
 		02CF009119C7B28400DCED6F /* RPI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009019C7B28400DCED6F /* RPI@2x.png */; };
 		02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */; };
 		02CF009619C7DDC800DCED6F /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF009519C7DDC800DCED6F /* Back@2x.png */; };
-		02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */; };
-		02CF00A519C8D76800DCED6F /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A019C8D76800DCED6F /* RECommonFunctions.m */; };
-		02CF00A619C8D76800DCED6F /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A219C8D76800DCED6F /* RESideMenu.m */; };
-		02CF00A719C8D76800DCED6F /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */; };
-		02CF00D919C8DCA400DCED6F /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF00D819C8DCA400DCED6F /* TestViewController.m */; };
+		02CF009919C7DF4F00DCED6F /* CourseInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CF009819C7DF4F00DCED6F /* CourseInformationTableViewController.m */; };
 		02CF00DB19C8DDC800DCED6F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CF00DA19C8DDC800DCED6F /* Logo.png */; };
+		02DA72A11A12FB1D00F08C63 /* CapsuleIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DA72A01A12FB1D00F08C63 /* CapsuleIndexTableViewController.m */; };
 		02DBFD6019EC5E350095AAAB /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DBFD5F19EC5E350095AAAB /* ApiManager.m */; };
 /* End PBXBuildFile section */
 
@@ -69,15 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022C817119F6F00F004F229D /* CourseListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseListTableViewController.h; sourceTree = "<group>"; };
-		022C817219F6F00F004F229D /* CourseListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseListTableViewController.m; sourceTree = "<group>"; };
-		022C817419F6F039004F229D /* AllCoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCoursesTableViewController.h; sourceTree = "<group>"; };
-		022C817519F6F039004F229D /* AllCoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCoursesTableViewController.m; sourceTree = "<group>"; };
-		022C817719F6F04A004F229D /* MyCoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCoursesTableViewController.h; sourceTree = "<group>"; };
-		022C817819F6F04A004F229D /* MyCoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCoursesTableViewController.m; sourceTree = "<group>"; };
+		022C817119F6F00F004F229D /* CourseIndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseIndexTableViewController.h; sourceTree = "<group>"; };
+		022C817219F6F00F004F229D /* CourseIndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseIndexTableViewController.m; sourceTree = "<group>"; };
 		0246C7DB19E5AD7700518515 /* Message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Message@2x.png"; sourceTree = "<group>"; };
 		025D7C3F19C7952B004F61E5 /* SignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpTableViewController.h; sourceTree = "<group>"; };
 		025D7C4019C7952B004F61E5 /* SignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpTableViewController.m; sourceTree = "<group>"; };
+		0283139C1A25065B008302D2 /* CapsuleInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapsuleInformationTableViewController.h; sourceTree = "<group>"; };
+		0283139D1A25065B008302D2 /* CapsuleInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapsuleInformationTableViewController.m; sourceTree = "<group>"; };
 		0290E7AA19C77FE100E516F0 /* Grapefruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grapefruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290E7AD19C77FE100E516F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,17 +118,11 @@
 		02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuTableViewController.h; sourceTree = "<group>"; };
 		02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuTableViewController.m; sourceTree = "<group>"; };
 		02CF009519C7DDC800DCED6F /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
-		02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTableViewController.h; sourceTree = "<group>"; };
-		02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTableViewController.m; sourceTree = "<group>"; };
-		02CF009F19C8D76800DCED6F /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
-		02CF00A019C8D76800DCED6F /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
-		02CF00A119C8D76800DCED6F /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
-		02CF00A219C8D76800DCED6F /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
-		02CF00A319C8D76800DCED6F /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
-		02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
-		02CF00D719C8DCA400DCED6F /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		02CF00D819C8DCA400DCED6F /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		02CF009719C7DF4F00DCED6F /* CourseInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInformationTableViewController.h; sourceTree = "<group>"; };
+		02CF009819C7DF4F00DCED6F /* CourseInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInformationTableViewController.m; sourceTree = "<group>"; };
 		02CF00DA19C8DDC800DCED6F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		02DA729F1A12FB1D00F08C63 /* CapsuleIndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapsuleIndexTableViewController.h; sourceTree = "<group>"; };
+		02DA72A01A12FB1D00F08C63 /* CapsuleIndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapsuleIndexTableViewController.m; sourceTree = "<group>"; };
 		02DBFD5E19EC5E350095AAAB /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		02DBFD5F19EC5E350095AAAB /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,17 +162,15 @@
 			name = "Welcome Flow";
 			sourceTree = "<group>";
 		};
-		022C817A19F6F050004F229D /* Course Lists */ = {
+		022C817A19F6F050004F229D /* Courses */ = {
 			isa = PBXGroup;
 			children = (
-				022C817119F6F00F004F229D /* CourseListTableViewController.h */,
-				022C817219F6F00F004F229D /* CourseListTableViewController.m */,
-				022C817419F6F039004F229D /* AllCoursesTableViewController.h */,
-				022C817519F6F039004F229D /* AllCoursesTableViewController.m */,
-				022C817719F6F04A004F229D /* MyCoursesTableViewController.h */,
-				022C817819F6F04A004F229D /* MyCoursesTableViewController.m */,
+				022C817119F6F00F004F229D /* CourseIndexTableViewController.h */,
+				022C817219F6F00F004F229D /* CourseIndexTableViewController.m */,
+				02CF009719C7DF4F00DCED6F /* CourseInformationTableViewController.h */,
+				02CF009819C7DF4F00DCED6F /* CourseInformationTableViewController.m */,
 			);
-			name = "Course Lists";
+			name = Courses;
 			sourceTree = "<group>";
 		};
 		0290E7A119C77FE100E516F0 = {
@@ -324,13 +310,10 @@
 			isa = PBXGroup;
 			children = (
 				022C817019F6EFE7004F229D /* Welcome Flow */,
-				022C817A19F6F050004F229D /* Course Lists */,
-				02CF009719C7DF4F00DCED6F /* CourseTableViewController.h */,
-				02CF009819C7DF4F00DCED6F /* CourseTableViewController.m */,
+				022C817A19F6F050004F229D /* Courses */,
+				02DA729E1A12FAE700F08C63 /* Capsules */,
 				02CF009219C7D13900DCED6F /* SideMenuTableViewController.h */,
 				02CF009319C7D13900DCED6F /* SideMenuTableViewController.m */,
-				02CF00D719C8DCA400DCED6F /* TestViewController.h */,
-				02CF00D819C8DCA400DCED6F /* TestViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -338,23 +321,19 @@
 		0290E83419C78BFC00E516F0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				02CF009E19C8D76800DCED6F /* RESideMenu */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
 		};
-		02CF009E19C8D76800DCED6F /* RESideMenu */ = {
+		02DA729E1A12FAE700F08C63 /* Capsules */ = {
 			isa = PBXGroup;
 			children = (
-				02CF009F19C8D76800DCED6F /* RECommonFunctions.h */,
-				02CF00A019C8D76800DCED6F /* RECommonFunctions.m */,
-				02CF00A119C8D76800DCED6F /* RESideMenu.h */,
-				02CF00A219C8D76800DCED6F /* RESideMenu.m */,
-				02CF00A319C8D76800DCED6F /* UIViewController+RESideMenu.h */,
-				02CF00A419C8D76800DCED6F /* UIViewController+RESideMenu.m */,
+				02DA729F1A12FB1D00F08C63 /* CapsuleIndexTableViewController.h */,
+				02DA72A01A12FB1D00F08C63 /* CapsuleIndexTableViewController.m */,
+				0283139C1A25065B008302D2 /* CapsuleInformationTableViewController.h */,
+				0283139D1A25065B008302D2 /* CapsuleInformationTableViewController.m */,
 			);
-			name = RESideMenu;
-			path = ../../../RESideMenu/RESideMenu;
+			name = Capsules;
 			sourceTree = "<group>";
 		};
 		02DBFD5D19EC5E1C0095AAAB /* Managers */ = {
@@ -486,21 +465,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DBFD6019EC5E350095AAAB /* ApiManager.m in Sources */,
-				022C817319F6F00F004F229D /* CourseListTableViewController.m in Sources */,
+				022C817319F6F00F004F229D /* CourseIndexTableViewController.m in Sources */,
 				0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */,
-				02CF00D919C8DCA400DCED6F /* TestViewController.m in Sources */,
-				02CF00A519C8D76800DCED6F /* RECommonFunctions.m in Sources */,
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
-				02CF00A619C8D76800DCED6F /* RESideMenu.m in Sources */,
-				022C817919F6F04A004F229D /* MyCoursesTableViewController.m in Sources */,
-				02CF00A719C8D76800DCED6F /* UIViewController+RESideMenu.m in Sources */,
 				0290E84119C78E8900E516F0 /* SignInTableViewController.m in Sources */,
-				02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */,
+				02CF009919C7DF4F00DCED6F /* CourseInformationTableViewController.m in Sources */,
+				02DA72A11A12FB1D00F08C63 /* CapsuleIndexTableViewController.m in Sources */,
 				02CF009419C7D13900DCED6F /* SideMenuTableViewController.m in Sources */,
 				02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
-				022C817619F6F039004F229D /* AllCoursesTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,
+				0283139E1A25065B008302D2 /* CapsuleInformationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

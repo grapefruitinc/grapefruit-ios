@@ -1,0 +1,97 @@
+//
+//  CourseIndexTableViewController.m
+//  Grapefruit
+//
+//  Created by Logan Shire on 10/21/14.
+//  Copyright (c) 2014 Logan Shire. All rights reserved.
+//
+
+#import "CourseIndexTableViewController.h"
+#import "CourseTableViewCell.h"
+#import "CourseInformationTableViewController.h"
+#import "AppDelegate.h"
+#import "ApiManager.h"
+
+@interface CourseIndexTableViewController () <ApiManagerDelegate>
+
+@property (strong, nonatomic) ApiManager *sharedApiManager;
+@property (strong, nonatomic) NSArray *courses;
+
+@end
+
+@implementation CourseIndexTableViewController
+
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.courses = [NSArray new];
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    self.sharedApiManager = [ApiManager sharedInstance];
+    self.sharedApiManager.delegate = self;
+    [self.sharedApiManager getCourseIndex];
+}
+
+#pragma mark - ApiManager Delegate
+
+- (void)getCourseIndexSuccessful:(NSArray *)courseIndex
+{
+    self.courses = [courseIndex sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
+    [self.tableView reloadData];
+}
+
+- (void)getCourseIndexFailedWithError:(NSError *)error
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alertView show];
+}
+
+#pragma mark - TableView Data Source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.courses.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *reuseIdentifier = @"CourseCell";
+    
+    CourseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (!cell)
+    {
+        cell = [[CourseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    }
+    
+    NSDictionary *course = self.courses[indexPath.row];
+    
+    cell.courseTitleLabel.text = course[@"name"];
+    NSString *courseNumberString = [NSString stringWithFormat:@"%@ %@ - %@ Credits", course[@"subject"], course[@"course_number"], course[@"credits"]];
+    cell.courseNumberLabel.text = courseNumberString;
+    
+    return cell;
+}
+
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // TODO: Pull up correct course info.
+    CourseInformationTableViewController *courseInformationTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseInformationTableViewController"];
+    courseInformationTableViewController.courseID = [self.courses[indexPath.row][@"id"] integerValue];
+    [self.navigationController pushViewController:courseInformationTableViewController animated:YES];
+}
+
+@end

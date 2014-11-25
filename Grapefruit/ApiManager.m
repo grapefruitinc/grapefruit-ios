@@ -14,8 +14,6 @@
 @interface ApiManager () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) NSUserDefaults *userDefaults;
-@property (strong, nonatomic) NSMutableURLRequest *request;
-@property (strong, nonatomic) NSURLConnection *connection;
 @property (strong, nonatomic) NSString *apiCall;
 @property (strong, nonatomic) NSMutableData *mutableData;
 
@@ -30,7 +28,6 @@
     self = [super init];
     if (self)
     {
-        self.courses = [NSMutableDictionary new];
         self.userDefaults = [NSUserDefaults standardUserDefaults];
         if ([self.userDefaults valueForKey:@"user_id"])
         {
@@ -39,10 +36,7 @@
             self.name = [self.userDefaults valueForKey:@"user_name"];
             self.authenticationToken = [self.userDefaults valueForKey:@"authentication_token"];
         }
-        self.request = [NSMutableURLRequest new];
         self.mutableData = [NSMutableData new];
-        [self.request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [self.request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
     }
     return self;
 }
@@ -59,59 +53,92 @@
     return sharedObject;
 }
 
+#pragma mark - Helper Methods
+
+- (NSURLRequest *)requestWithURL:(NSURL *)requestURL method:(NSString *)requestMethod header:(NSDictionary *)headerDictionary body:(NSDictionary *)bodyDictionary
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
+    [request setHTTPMethod:requestMethod];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    if (headerDictionary)
+    {
+        for (NSString *key in headerDictionary.allKeys)
+        {
+            [request addValue:headerDictionary[key] forHTTPHeaderField:key];
+        }
+    }
+    if (bodyDictionary)
+    {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyDictionary options:0 error:nil];
+        [request setHTTPBody:jsonData];
+    }
+    return [request copy];
+}
+
 #pragma mark - Public Methods
 
 - (void)signUpWithEmail:(NSString *)email password:(NSString *)password name:(NSString *)name
 {
-    NSURL *signUpUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_up"]];
-    [self.request setURL:signUpUrl];
-    [self.request setHTTPMethod:@"POST"];
-    NSDictionary *userDictionary = @{@"email":email, @"password":password,@"name":name};
-    NSDictionary *postDictionary = @{@"user":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
-    [self.request setHTTPBody:jsonData];
     self.apiCall = @"sign_up";
-    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+    NSURL *signUpUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_up"]];
+    NSDictionary *postDictionary = @{@"user":@{@"email":email, @"password":password,@"name":name}};
+    NSURLRequest *request = [self requestWithURL:signUpUrl method:@"POST" header:nil body:postDictionary];
+    [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password
 {
-    NSURL *signInUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_in"]];
-    [self.request setURL:signInUrl];
-    [self.request setHTTPMethod:@"POST"];
-    NSDictionary *userDictionary = @{@"email":email, @"password":password};
-    NSDictionary *postDictionary = @{@"user":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
-    [self.request setHTTPBody:jsonData];
     self.apiCall = @"sign_in";
-    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+    NSURL *signInUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_in"]];
+    NSDictionary *postDictionary = @{@"user":@{@"email":email, @"password":password}};
+    NSURLRequest *request = [self requestWithURL:signInUrl method:@"POST" header:nil body:postDictionary];
+    [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 - (void)signOut
 {
-    NSURL *signOutUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_out"]];
-    [self.request setURL:signOutUrl];
-    [self.request setHTTPMethod:@"DELETE"];
-    NSDictionary *userDictionary = @{@"email":self.email, @"authentication_token":self.authenticationToken};
-    NSDictionary *postDictionary = @{@"authentication_data":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
-    [self.request setHTTPBody:jsonData];
     self.apiCall = @"sign_out";
-    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+    NSURL *signOutUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_out"]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSURLRequest *request = [self requestWithURL:signOutUrl method:@"DELETE" header:headerDictionary body:nil];
+    [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
-- (void)getCourses
+- (void)getCourseIndex
 {
-    NSURL *coursesUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"courses"]];
-    [self.request setURL:coursesUrl];
-    [self.request setHTTPMethod:@"GET"];
-    NSDictionary *userDictionary = @{@"email":self.email, @"authentication_token":self.authenticationToken};
-    NSDictionary *postDictionary = @{@"authentication_data":userDictionary};
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postDictionary options:0 error:nil];
-    [self.request setHTTPBody:jsonData];
-    self.apiCall = @"courses";
-    NSLog(@"%@", self.request);
-    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+    self.apiCall = @"course_index";
+    NSURL *courseIndexUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"courses"]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSURLRequest *request = [self requestWithURL:courseIndexUrl method:@"GET" header:headerDictionary body:nil];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+- (void)getCourseInformation:(NSInteger)courseID
+{
+    self.apiCall = @"course_information";
+    NSURL *courseInformationUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/courses/%ld", BASE_URL, (long)courseID]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSURLRequest *request = [self requestWithURL:courseInformationUrl method:@"GET" header:headerDictionary body:nil];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+- (void)getCapsuleIndex:(NSInteger)courseID
+{
+    self.apiCall = @"capsule_index";
+    NSURL *capsuleIndexUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/courses/%ld/capsules", BASE_URL, (long)courseID]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSURLRequest *request = [self requestWithURL:capsuleIndexUrl method:@"GET" header:headerDictionary body:nil];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+- (void)getCapsuleInformation:(NSInteger)courseID capsule:(NSInteger)capsuleID
+{
+    self.apiCall = @"capsule_information";
+    NSURL *capsuleInformationUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/courses/%ld/capsule/%ld", BASE_URL, (long)courseID, (long)capsuleID]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSURLRequest *request = [self requestWithURL:capsuleInformationUrl method:@"GET" header:headerDictionary body:nil];
+    [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
 #pragma mark - Connection Delegate
@@ -130,18 +157,24 @@
     {
         [self.delegate signOutFailedWithError:error];
     }
-    else if ([self.apiCall isEqualToString:@"courses"])
+    else if ([self.apiCall isEqualToString:@"course_index"])
     {
-        [self.delegate getCoursesFailedWithError:error];
+        [self.delegate getCourseIndexFailedWithError:error];
     }
-    self.request = [NSMutableURLRequest new];
+    else if ([self.apiCall isEqualToString:@"course_information"])
+    {
+        [self.delegate getCourseIndexFailedWithError:error];
+    }
+    else if ([self.apiCall isEqualToString:@"capsule_index"])
+    {
+        [self.delegate getCapsuleIndexFailedWithError:error];
+    }
+    else if ([self.apiCall isEqualToString:@"capsule_show"])
+    {
+        [self.delegate getCapsuleInformationFailedWithError:error];
+    }
     self.mutableData = [NSMutableData new];
 }
-
-//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-//{
-//    NSLog(@"%@", response);
-//}
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
@@ -150,70 +183,102 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    // TEST:
     NSString *dataString = [[NSString alloc] initWithData:[self.mutableData copy] encoding:NSStringEncodingConversionAllowLossy];
     NSLog(@"%@", dataString);
-    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:[self.mutableData copy] options:NSJSONReadingAllowFragments error:nil];
-    if ([self.apiCall isEqualToString:@"sign_up"])
+    
+    NSObject *response = [NSJSONSerialization JSONObjectWithData:[self.mutableData copy] options:NSJSONReadingAllowFragments error:nil];
+    
+    // Check for error:
+    if ([response isKindOfClass:[NSDictionary class]])
     {
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
         if (responseDictionary[@"success"] && ![responseDictionary[@"success"] boolValue])
         {
-            [self.delegate signUpFailedWithError:[self errorWithMessage:responseDictionary[@"message"]]];
+            NSError *error = [self errorWithMessage:responseDictionary[@"message"]];
+            if ([self.apiCall isEqualToString:@"sign_up"])
+            {
+                [self.delegate signUpFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"sign_in"])
+            {
+                [self.delegate signInFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"sign_out"])
+            {
+                [self.delegate signOutFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"course_index"])
+            {
+                [self.delegate getCourseIndexFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"course_information"])
+            {
+                [self.delegate getCourseInformationFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"capsule_index"])
+            {
+                [self.delegate getCapsuleIndexFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"capsule_show"])
+            {
+                [self.delegate getCapsuleInformationFailedWithError:error];
+            }
+            return;
         }
-        else
-        {
-            self.userID = [responseDictionary[@"id"] integerValue];
-            self.email = responseDictionary[@"email"];
-            self.name = responseDictionary[@"name"];
-            self.authenticationToken = responseDictionary[@"authentication_token"];
-            [self save];
-            [self.delegate signUpSuccessful];
-        }
+    }
+    
+    
+    // Perform requisite actions:
+    if ([self.apiCall isEqualToString:@"sign_up"])
+    {
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
+        self.userID = [responseDictionary[@"id"] integerValue];
+        self.email = responseDictionary[@"email"];
+        self.name = responseDictionary[@"name"];
+        self.authenticationToken = responseDictionary[@"authentication_token"];
+        [self save];
+        [self.delegate signUpSuccessful];
     }
     else if ([self.apiCall isEqualToString:@"sign_in"])
     {
-        if (responseDictionary[@"success"] && ![responseDictionary[@"success"] boolValue])
-        {
-            [self.delegate signInFailedWithError:[self errorWithMessage:responseDictionary[@"message"]]];
-        }
-        else
-        {
-            self.userID = [responseDictionary[@"id"] integerValue];
-            self.email = responseDictionary[@"email"];
-            self.name = responseDictionary[@"name"];
-            self.authenticationToken = responseDictionary[@"authentication_token"];
-            [self save];
-            [self.delegate signInSuccessful];
-        }
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
+        self.userID = [responseDictionary[@"id"] integerValue];
+        self.email = responseDictionary[@"email"];
+        self.name = responseDictionary[@"name"];
+        self.authenticationToken = responseDictionary[@"authentication_token"];
+        [self save];
+        [self.delegate signInSuccessful];
     }
     else if ([self.apiCall isEqualToString:@"sign_out"])
     {
-        if (responseDictionary[@"success"] && ![responseDictionary[@"success"] boolValue])
-        {
-            [self.delegate signOutFailedWithError:[self errorWithMessage:responseDictionary[@"message"]]];
-        }
-        else
-        {
-            [self.userDefaults removeObjectForKey:@"user_id"];
-            [self.userDefaults removeObjectForKey:@"email"];
-            [self.userDefaults removeObjectForKey:@"name"];
-            [self.userDefaults removeObjectForKey:@"authentication_token"];
-            [self.userDefaults synchronize];
-            [self.delegate signOutSuccessful];
-        }
+        [self.userDefaults removeObjectForKey:@"user_id"];
+        [self.userDefaults removeObjectForKey:@"email"];
+        [self.userDefaults removeObjectForKey:@"name"];
+        [self.userDefaults removeObjectForKey:@"authentication_token"];
+        [self.userDefaults synchronize];
+        [self.delegate signOutSuccessful];
     }
-    else if ([self.apiCall isEqualToString:@"courses"])
+    else if ([self.apiCall isEqualToString:@"course_index"])
     {
-        if (responseDictionary[@"success"] && ![responseDictionary[@"success"] boolValue])
-        {
-            [self.delegate getCoursesFailedWithError:[self errorWithMessage:responseDictionary[@"message"]]];
-        }
-        else
-        {
-            NSLog(@"%@", responseDictionary);
-            [self.delegate getCoursesSuccessful];
-        }
+        NSArray *responseArray = ((NSArray *)response);
+        [self.delegate getCourseIndexSuccessful:responseArray];
     }
-    self.request = [NSMutableURLRequest new];
+    else if ([self.apiCall isEqualToString:@"course_information"])
+    {
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
+        [self.delegate getCourseInformationSuccessful:responseDictionary];
+    }
+    else if ([self.apiCall isEqualToString:@"capsule_index"])
+    {
+        NSArray *responseArray = ((NSArray *)response);
+        [self.delegate getCapsuleIndexSuccessful:responseArray];
+    }
+    else if ([self.apiCall isEqualToString:@"capsule_information"])
+    {
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
+        [self.delegate getCapsuleInformationSuccessful:responseDictionary];
+    }
     self.mutableData = [NSMutableData new];
 }
 

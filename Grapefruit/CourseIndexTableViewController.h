@@ -1,5 +1,5 @@
 //
-//  CourseListTableViewController.h
+//  CourseIndexTableViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 10/21/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CourseListTableViewController : UITableViewController
+@interface CourseIndexTableViewController : UITableViewController
 
 @end

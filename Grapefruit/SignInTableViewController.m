@@ -7,7 +7,7 @@
 //
 
 #import "SignInTableViewController.h"
-#import "MyCoursesTableViewController.h"
+#import "CourseIndexTableViewController.h"
 #import "ApiManager.h"
 
 @interface SignInTableViewController () <UITextFieldDelegate, ApiManagerDelegate>
@@ -31,6 +31,13 @@
     
     self.emailTextField.delegate =
     self.passwordTextField.delegate = self;
+    
+    ApiManager *sharedApiManager = [ApiManager sharedInstance];
+    if (sharedApiManager.userID)
+    {
+        CourseIndexTableViewController *courseIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseIndexTableViewController"];
+        [self.navigationController showViewController:courseIndexTableViewController sender:self];
+    }
 }
 
 #pragma mark - TextField Delegate
@@ -101,8 +108,8 @@
 
 - (void)signInSuccessful
 {
-    MyCoursesTableViewController *myCoursesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MyCoursesTableViewController"];
-    [self.navigationController showViewController:myCoursesTableViewController sender:self];
+    CourseIndexTableViewController *courseIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseIndexTableViewController"];
+    [self.navigationController showViewController:courseIndexTableViewController sender:self];
 }
 
 - (void)signInFailedWithError:(NSError *)error
