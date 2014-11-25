@@ -636,10 +636,35 @@
         <scene sceneID="N6e-Il-IUe">
             <objects>
                 <tableViewController storyboardIdentifier="LectureIndexTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2c-HC-vsZ" customClass="LectureIndexTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y72-wO-aps">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y72-wO-aps">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LectureNameCell" id="day-3e-fPE" customClass="LectureNameTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="day-3e-fPE" id="YKq-jY-IE5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVT-QY-8yn">
+                                            <rect key="frame" x="8" y="8" width="304" height="48"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lVT-QY-8yn" secondAttribute="bottom" constant="8" id="EJD-d8-XOv"/>
+                                        <constraint firstItem="lVT-QY-8yn" firstAttribute="leading" secondItem="YKq-jY-IE5" secondAttribute="leading" constant="8" id="UyM-aI-iNw"/>
+                                        <constraint firstAttribute="trailing" secondItem="lVT-QY-8yn" secondAttribute="trailing" constant="8" id="fXS-H7-ukB"/>
+                                        <constraint firstItem="lVT-QY-8yn" firstAttribute="top" secondItem="YKq-jY-IE5" secondAttribute="top" constant="8" id="vrX-PX-dEd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lectureNameLabel" destination="lVT-QY-8yn" id="Dm4-MP-Gu7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="B2c-HC-vsZ" id="2jN-1d-nxc"/>
@@ -658,6 +683,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UER-Hg-45W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2020" y="164"/>
+        </scene>
+        <!--Lecture Information-->
+        <scene sceneID="RVG-vy-Gah">
+            <objects>
+                <tableViewController storyboardIdentifier="LectureInformationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4uI-Qa-AZW" customClass="LectureInformationTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="jBl-q0-cFd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="4uI-Qa-AZW" id="nGs-9S-OkL"/>
+                            <outlet property="delegate" destination="4uI-Qa-AZW" id="ZmL-4A-BUp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lecture Information" id="3be-X2-IDD">
+                        <barButtonItem key="leftBarButtonItem" image="Back.png" id="ZdY-GJ-smv">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="4uI-Qa-AZW" id="BQf-id-rK3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeW-kX-EbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2405" y="164"/>
         </scene>
     </scenes>
     <resources>

@@ -10,4 +10,8 @@
 
 @interface LectureInformationTableViewController : UITableViewController
 
+@property (nonatomic) NSInteger courseID;
+@property (nonatomic) NSInteger capsuleID;
+@property (nonatomic) NSInteger lectureID;
+
 @end

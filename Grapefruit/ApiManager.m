@@ -141,6 +141,15 @@
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
+- (void)getLectureInformation:(NSInteger)courseID capsule:(NSInteger)capsuleID lecture:(NSInteger)lectureID
+{
+    self.apiCall = @"lecture_information";
+    NSURL *capsuleInformationUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/courses/%ld/capsules/%ld/lectures/%ld", BASE_URL, (long)courseID, (long)capsuleID, (long)lectureID]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSURLRequest *request = [self requestWithURL:capsuleInformationUrl method:@"GET" header:headerDictionary body:nil];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
 #pragma mark - Connection Delegate
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -169,9 +178,13 @@
     {
         [self.delegate getCapsuleIndexFailedWithError:error];
     }
-    else if ([self.apiCall isEqualToString:@"capsule_show"])
+    else if ([self.apiCall isEqualToString:@"capsule_information"])
     {
         [self.delegate getCapsuleInformationFailedWithError:error];
+    }
+    else if ([self.apiCall isEqualToString:@"lecture_information"])
+    {
+        [self.delegate getLectureInformationFailedWithError:error];
     }
     self.mutableData = [NSMutableData new];
 }
@@ -220,9 +233,13 @@
             {
                 [self.delegate getCapsuleIndexFailedWithError:error];
             }
-            else if ([self.apiCall isEqualToString:@"capsule_show"])
+            else if ([self.apiCall isEqualToString:@"capsule_information"])
             {
                 [self.delegate getCapsuleInformationFailedWithError:error];
+            }
+            else if ([self.apiCall isEqualToString:@"lecture_information"])
+            {
+                [self.delegate getLectureInformationFailedWithError:error];
             }
             return;
         }
@@ -278,6 +295,11 @@
     {
         NSDictionary *responseDictionary = ((NSDictionary *)response);
         [self.delegate getCapsuleInformationSuccessful:responseDictionary];
+    }
+    else if ([self.apiCall isEqualToString:@"lecture_information"])
+    {
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
+        [self.delegate getLectureInformationSuccessful:responseDictionary];
     }
     self.mutableData = [NSMutableData new];
 }

@@ -25,6 +25,8 @@
 - (void)getCapsuleIndexFailedWithError:(NSError *)error;
 - (void)getCapsuleInformationSuccessful:(NSDictionary *)capsuleInformation;
 - (void)getCapsuleInformationFailedWithError:(NSError *)error;
+- (void)getLectureInformationSuccessful:(NSDictionary *)lectureInformation;
+- (void)getLectureInformationFailedWithError:(NSError *)error;
 
 @end
 
@@ -45,5 +47,6 @@
 - (void)getCourseInformation:(NSInteger)courseID;
 - (void)getCapsuleIndex:(NSInteger)courseID;
 - (void)getCapsuleInformation:(NSInteger)courseID capsule:(NSInteger)capsuleID;
+- (void)getLectureInformation:(NSInteger)courseID capsule:(NSInteger)capsuleID lecture:(NSInteger)lectureID;
 
 @end
