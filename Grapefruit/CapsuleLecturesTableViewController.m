@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
-#import "LectureIndexTableViewController.h"
+#import "CapsuleLecturesTableViewController.h"
 #import "ApiManager.h"
 #import "LectureNameTableViewCell.h"
-#import "LectureInformationTableViewController.h"
+#import "LectureTableViewController.h"
 
-@interface LectureIndexTableViewController () <ApiManagerDelegate>
+@interface CapsuleLecturesTableViewController () <ApiManagerDelegate>
 
 - (IBAction)backButtonPressed:(id)sender;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation LectureIndexTableViewController
+@implementation CapsuleLecturesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -80,11 +80,11 @@
     
     NSDictionary *lecture = self.capsuleLectures[indexPath.row][@"lecture"];
     
-    LectureInformationTableViewController *lectureInformationTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LectureInformationTableViewController"];
-    lectureInformationTableViewController.courseID = self.courseID;
-    lectureInformationTableViewController.capsuleID = self.capsuleID;
-    lectureInformationTableViewController.lectureID = [lecture[@"id"] integerValue];
-    [self.navigationController showViewController:lectureInformationTableViewController sender:self];
+    LectureTableViewController *lectureTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LectureTableViewController"];
+    lectureTableViewController.courseID = self.courseID;
+    lectureTableViewController.capsuleID = self.capsuleID;
+    lectureTableViewController.lectureID = [lecture[@"id"] integerValue];
+    [self.navigationController showViewController:lectureTableViewController sender:self];
 }
 
 #pragma mark - User Interaction

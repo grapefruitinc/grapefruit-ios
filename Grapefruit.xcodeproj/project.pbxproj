@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02045C471A2E6A44005B3D0B /* LectureDocumentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02045C461A2E6A44005B3D0B /* LectureDocumentsTableViewController.m */; };
+		02045C4B1A2E6A5C005B3D0B /* LectureVideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02045C4A1A2E6A5C005B3D0B /* LectureVideosTableViewController.m */; };
+		02045C4E1A2E6A6E005B3D0B /* LectureCommentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02045C4D1A2E6A6E005B3D0B /* LectureCommentsTableViewController.m */; };
 		02221C261A2E479300449AA1 /* CourseDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02221C251A2E479300449AA1 /* CourseDescriptionViewController.m */; };
 		02221C291A2E4A8100449AA1 /* CourseInstructorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02221C281A2E4A8100449AA1 /* CourseInstructorsTableViewController.m */; };
 		02221C2C1A2E4B2300449AA1 /* InstructorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02221C2B1A2E4B2300449AA1 /* InstructorTableViewCell.m */; };
@@ -20,8 +23,8 @@
 		0276B02E1A2D52110018921E /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0276B02D1A2D52110018921E /* MenuTableViewController.m */; };
 		0276B0301A2D52600018921E /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0276B02F1A2D52600018921E /* Close@2x.png */; };
 		028313A11A2510CE008302D2 /* CapsuleNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A01A2510CE008302D2 /* CapsuleNameTableViewCell.m */; };
-		028313A41A251B72008302D2 /* LectureIndexTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A31A251B72008302D2 /* LectureIndexTableViewController.m */; };
-		028313A81A251BC9008302D2 /* LectureInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A71A251BC9008302D2 /* LectureInformationTableViewController.m */; };
+		028313A41A251B72008302D2 /* CapsuleLecturesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A31A251B72008302D2 /* CapsuleLecturesTableViewController.m */; };
+		028313A81A251BC9008302D2 /* LectureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313A71A251BC9008302D2 /* LectureTableViewController.m */; };
 		028313AB1A251DED008302D2 /* LectureNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 028313AA1A251DED008302D2 /* LectureNameTableViewCell.m */; };
 		0290E7AE19C77FE100E516F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AD19C77FE100E516F0 /* Foundation.framework */; };
 		0290E7B019C77FE100E516F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0290E7AF19C77FE100E516F0 /* CoreGraphics.framework */; };
@@ -76,6 +79,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02045C451A2E6A44005B3D0B /* LectureDocumentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureDocumentsTableViewController.h; sourceTree = "<group>"; };
+		02045C461A2E6A44005B3D0B /* LectureDocumentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureDocumentsTableViewController.m; sourceTree = "<group>"; };
+		02045C491A2E6A5C005B3D0B /* LectureVideosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureVideosTableViewController.h; sourceTree = "<group>"; };
+		02045C4A1A2E6A5C005B3D0B /* LectureVideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureVideosTableViewController.m; sourceTree = "<group>"; };
+		02045C4C1A2E6A6E005B3D0B /* LectureCommentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureCommentsTableViewController.h; sourceTree = "<group>"; };
+		02045C4D1A2E6A6E005B3D0B /* LectureCommentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureCommentsTableViewController.m; sourceTree = "<group>"; };
 		02221C241A2E479300449AA1 /* CourseDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseDescriptionViewController.h; sourceTree = "<group>"; };
 		02221C251A2E479300449AA1 /* CourseDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseDescriptionViewController.m; sourceTree = "<group>"; };
 		02221C271A2E4A8100449AA1 /* CourseInstructorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInstructorsTableViewController.h; sourceTree = "<group>"; };
@@ -99,10 +108,10 @@
 		0276B02F1A2D52600018921E /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
 		0283139F1A2510CE008302D2 /* CapsuleNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapsuleNameTableViewCell.h; sourceTree = "<group>"; };
 		028313A01A2510CE008302D2 /* CapsuleNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapsuleNameTableViewCell.m; sourceTree = "<group>"; };
-		028313A21A251B72008302D2 /* LectureIndexTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureIndexTableViewController.h; sourceTree = "<group>"; };
-		028313A31A251B72008302D2 /* LectureIndexTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureIndexTableViewController.m; sourceTree = "<group>"; };
-		028313A61A251BC9008302D2 /* LectureInformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureInformationTableViewController.h; sourceTree = "<group>"; };
-		028313A71A251BC9008302D2 /* LectureInformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureInformationTableViewController.m; sourceTree = "<group>"; };
+		028313A21A251B72008302D2 /* CapsuleLecturesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapsuleLecturesTableViewController.h; sourceTree = "<group>"; };
+		028313A31A251B72008302D2 /* CapsuleLecturesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CapsuleLecturesTableViewController.m; sourceTree = "<group>"; };
+		028313A61A251BC9008302D2 /* LectureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureTableViewController.h; sourceTree = "<group>"; };
+		028313A71A251BC9008302D2 /* LectureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureTableViewController.m; sourceTree = "<group>"; };
 		028313A91A251DED008302D2 /* LectureNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LectureNameTableViewCell.h; sourceTree = "<group>"; };
 		028313AA1A251DED008302D2 /* LectureNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LectureNameTableViewCell.m; sourceTree = "<group>"; };
 		0290E7AA19C77FE100E516F0 /* Grapefruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grapefruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +192,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02045C441A2E67DD005B3D0B /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				028313A21A251B72008302D2 /* CapsuleLecturesTableViewController.h */,
+				028313A31A251B72008302D2 /* CapsuleLecturesTableViewController.m */,
+			);
+			name = Children;
+			sourceTree = "<group>";
+		};
+		02045C481A2E6A47005B3D0B /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				02045C4C1A2E6A6E005B3D0B /* LectureCommentsTableViewController.h */,
+				02045C4D1A2E6A6E005B3D0B /* LectureCommentsTableViewController.m */,
+				02045C451A2E6A44005B3D0B /* LectureDocumentsTableViewController.h */,
+				02045C461A2E6A44005B3D0B /* LectureDocumentsTableViewController.m */,
+				02045C491A2E6A5C005B3D0B /* LectureVideosTableViewController.h */,
+				02045C4A1A2E6A5C005B3D0B /* LectureVideosTableViewController.m */,
+			);
+			name = Children;
+			sourceTree = "<group>";
+		};
 		02221C301A2E4EBC00449AA1 /* Children */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +234,7 @@
 			children = (
 				02221C351A2E538D00449AA1 /* CapsuleTableViewController.h */,
 				02221C361A2E538D00449AA1 /* CapsuleTableViewController.m */,
+				02045C441A2E67DD005B3D0B /* Children */,
 			);
 			name = Capsules;
 			sourceTree = "<group>";
@@ -235,10 +267,9 @@
 		028313A51A251B7A008302D2 /* Lectures */ = {
 			isa = PBXGroup;
 			children = (
-				028313A21A251B72008302D2 /* LectureIndexTableViewController.h */,
-				028313A31A251B72008302D2 /* LectureIndexTableViewController.m */,
-				028313A61A251BC9008302D2 /* LectureInformationTableViewController.h */,
-				028313A71A251BC9008302D2 /* LectureInformationTableViewController.m */,
+				028313A61A251BC9008302D2 /* LectureTableViewController.h */,
+				028313A71A251BC9008302D2 /* LectureTableViewController.m */,
+				02045C481A2E6A47005B3D0B /* Children */,
 			);
 			name = Lectures;
 			sourceTree = "<group>";
@@ -528,20 +559,23 @@
 				02221C261A2E479300449AA1 /* CourseDescriptionViewController.m in Sources */,
 				02DBFD6019EC5E350095AAAB /* ApiManager.m in Sources */,
 				02221C2C1A2E4B2300449AA1 /* InstructorTableViewCell.m in Sources */,
-				028313A41A251B72008302D2 /* LectureIndexTableViewController.m in Sources */,
+				028313A41A251B72008302D2 /* CapsuleLecturesTableViewController.m in Sources */,
 				02221C331A2E4F7C00449AA1 /* AnnouncementTableViewCell.m in Sources */,
+				02045C471A2E6A44005B3D0B /* LectureDocumentsTableViewController.m in Sources */,
 				022C817319F6F00F004F229D /* CourseIndexTableViewController.m in Sources */,
 				0290E7BE19C77FE200E516F0 /* AppDelegate.m in Sources */,
+				02045C4E1A2E6A6E005B3D0B /* LectureCommentsTableViewController.m in Sources */,
 				0276B02E1A2D52110018921E /* MenuTableViewController.m in Sources */,
 				02221C371A2E538D00449AA1 /* CapsuleTableViewController.m in Sources */,
 				0290E7BA19C77FE200E516F0 /* main.m in Sources */,
 				0290E84119C78E8900E516F0 /* SignInTableViewController.m in Sources */,
 				02CF009919C7DF4F00DCED6F /* CourseTableViewController.m in Sources */,
+				02045C4B1A2E6A5C005B3D0B /* LectureVideosTableViewController.m in Sources */,
 				028313AB1A251DED008302D2 /* LectureNameTableViewCell.m in Sources */,
 				02DA72A11A12FB1D00F08C63 /* CourseCapsulesTableViewController.m in Sources */,
 				028313A11A2510CE008302D2 /* CapsuleNameTableViewCell.m in Sources */,
 				02CF008F19C7ADC000DCED6F /* CourseTableViewCell.m in Sources */,
-				028313A81A251BC9008302D2 /* LectureInformationTableViewController.m in Sources */,
+				028313A81A251BC9008302D2 /* LectureTableViewController.m in Sources */,
 				025D7C4119C7952B004F61E5 /* SignUpTableViewController.m in Sources */,
 				02221C291A2E4A8100449AA1 /* CourseInstructorsTableViewController.m in Sources */,
 				0290E7E919C7803000E516F0 /* ActivityView.m in Sources */,

@@ -97,23 +97,25 @@
 - (BOOL)isValid
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    if (![self.emailTextField.text isEqualToString:@""] && ![self isValidEmail:self.emailTextField.text])
-    {
+    
+    if (![self.emailTextField.text isEqualToString:@""] && ![self isValidEmail:self.emailTextField.text]) {
+        
         alertView.message = @"Please enter a valid email address.";
         [alertView show];
         return NO;
-    }
-    if (self.passwordTextField.text.length < 8)
-    {
-        alertView.message = @"Your password must be at least 8 characters.";
-        [alertView show];
-        return NO;
-    }
-    if (![self.passwordTextField.text isEqualToString:self.confirmTextField.text])
-    {
-        alertView.message = @"The passwords must match.";
-        [alertView show];
-        return NO;
+    } else if (![self.passwordTextField.text isEqualToString:@""]) {
+        
+        if (self.passwordTextField.text.length < 8) {
+            
+            alertView.message = @"Your password must be at least 8 characters.";
+            [alertView show];
+            return NO;
+        } else if (![self.passwordTextField.text isEqualToString:self.confirmTextField.text]) {
+            
+            alertView.message = @"The passwords must match.";
+            [alertView show];
+            return NO;
+        }
     }
     return YES;
 }

@@ -1,5 +1,5 @@
 //
-//  LectureInformationTableViewController.h
+//  CapsuleLectureIndexTableViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 11/25/14.
@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LectureInformationTableViewController : UITableViewController
+@interface CapsuleLecturesTableViewController : UITableViewController
 
 @property (nonatomic) NSInteger courseID;
 @property (nonatomic) NSInteger capsuleID;
-@property (nonatomic) NSInteger lectureID;
-@property (strong, nonatomic) NSDictionary *lectureInformation;
 
 @end

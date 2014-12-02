@@ -531,139 +531,6 @@
             </objects>
             <point key="canvasLocation" x="826" y="164"/>
         </scene>
-        <!--[Subject][Number]-->
-        <scene sceneID="qOT-Oy-1zc">
-            <objects>
-                <tableViewController storyboardIdentifier="CourseTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bkd-ip-SaB" customClass="CourseTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="DPY-xz-mAi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="nKH-Jp-VBJ">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LBU-VW-2HG" customClass="CourseTableViewCell">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBU-VW-2HG" id="caK-dH-ee0">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMo-G8-fuf">
-                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="aMo-G8-fuf" secondAttribute="trailing" constant="8" id="2wc-ki-oMW"/>
-                                                <constraint firstAttribute="bottom" secondItem="aMo-G8-fuf" secondAttribute="bottom" constant="8" id="Cth-8k-c6u"/>
-                                                <constraint firstItem="aMo-G8-fuf" firstAttribute="top" secondItem="caK-dH-ee0" secondAttribute="top" constant="8" id="aaN-MJ-Eqa"/>
-                                                <constraint firstItem="aMo-G8-fuf" firstAttribute="leading" secondItem="caK-dH-ee0" secondAttribute="leading" constant="8" id="xBM-ex-o20"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="courseTitleLabel" destination="aMo-G8-fuf" id="ykc-Og-NGT"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hPu-PA-Bhx" customClass="CourseTableViewCell">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hPu-PA-Bhx" id="02b-yJ-nAV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1o-BT-dUv">
-                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="i1o-BT-dUv" firstAttribute="leading" secondItem="02b-yJ-nAV" secondAttribute="leading" constant="8" id="0Fu-Ns-dEs"/>
-                                                <constraint firstItem="i1o-BT-dUv" firstAttribute="top" secondItem="02b-yJ-nAV" secondAttribute="top" constant="8" id="Xb0-W1-CNH"/>
-                                                <constraint firstAttribute="bottom" secondItem="i1o-BT-dUv" secondAttribute="bottom" constant="8" id="kbO-pZ-TEy"/>
-                                                <constraint firstAttribute="trailing" secondItem="i1o-BT-dUv" secondAttribute="trailing" constant="8" id="oGJ-YO-CTs"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="courseTitleLabel" destination="i1o-BT-dUv" id="LPw-5g-act"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gyg-rS-DbD" customClass="CourseTableViewCell">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gyg-rS-DbD" id="59J-3I-9Tj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiF-AZ-uRh">
-                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="hiF-AZ-uRh" firstAttribute="top" secondItem="59J-3I-9Tj" secondAttribute="top" constant="8" id="D38-wW-CFM"/>
-                                                <constraint firstItem="hiF-AZ-uRh" firstAttribute="leading" secondItem="59J-3I-9Tj" secondAttribute="leading" constant="8" id="OTv-d2-Jvc"/>
-                                                <constraint firstAttribute="bottom" secondItem="hiF-AZ-uRh" secondAttribute="bottom" constant="8" id="TFy-nQ-yEd"/>
-                                                <constraint firstAttribute="trailing" secondItem="hiF-AZ-uRh" secondAttribute="trailing" constant="8" id="xrL-uJ-m9a"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="courseTitleLabel" destination="hiF-AZ-uRh" id="yNp-zq-9Yr"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Afw-Fe-5RW" customClass="CourseTableViewCell">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Afw-Fe-5RW" id="KXn-hV-s3i">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capsules" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19S-lc-ONI">
-                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="19S-lc-ONI" secondAttribute="trailing" constant="8" id="6TC-C5-YhN"/>
-                                                <constraint firstItem="19S-lc-ONI" firstAttribute="leading" secondItem="KXn-hV-s3i" secondAttribute="leading" constant="8" id="Hau-Ee-Lnz"/>
-                                                <constraint firstItem="19S-lc-ONI" firstAttribute="top" secondItem="KXn-hV-s3i" secondAttribute="top" constant="8" id="QgX-ac-Wct"/>
-                                                <constraint firstAttribute="bottom" secondItem="19S-lc-ONI" secondAttribute="bottom" constant="8" id="gNX-lF-I34"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="courseTitleLabel" destination="19S-lc-ONI" id="OmY-q8-eL3"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Bkd-ip-SaB" id="aY3-Id-Dl0"/>
-                            <outlet property="delegate" destination="Bkd-ip-SaB" id="Ohk-PT-UyE"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="[Subject][Number]" id="Kra-B7-Ihv">
-                        <barButtonItem key="leftBarButtonItem" image="Back.png" id="Pbd-QG-YKI">
-                            <connections>
-                                <action selector="backButtonPressed:" destination="Bkd-ip-SaB" id="V7o-VZ-1iR"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" id="Q7y-6V-QGz"/>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TgV-2f-cR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1227" y="164"/>
-        </scene>
         <!--Description-->
         <scene sceneID="lqs-pA-DoZ">
             <objects>
@@ -827,10 +694,10 @@
             </objects>
             <point key="canvasLocation" x="1828" y="528"/>
         </scene>
-        <!--Lecture Index-->
+        <!--Lectures-->
         <scene sceneID="N6e-Il-IUe">
             <objects>
-                <tableViewController storyboardIdentifier="LectureIndexTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2c-HC-vsZ" customClass="LectureIndexTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CapsuleLecturesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B2c-HC-vsZ" customClass="CapsuleLecturesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="Y72-wO-aps">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -849,14 +716,10 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="lVT-QY-8yn" secondAttribute="bottom" constant="8" id="565-gA-nCC"/>
                                         <constraint firstAttribute="bottom" secondItem="lVT-QY-8yn" secondAttribute="bottom" constant="8" id="EJD-d8-XOv"/>
-                                        <constraint firstItem="lVT-QY-8yn" firstAttribute="leading" secondItem="YKq-jY-IE5" secondAttribute="leading" constant="8" id="UyM-aI-iNw"/>
                                         <constraint firstItem="lVT-QY-8yn" firstAttribute="top" secondItem="YKq-jY-IE5" secondAttribute="top" constant="8" id="VZb-4U-Ahm"/>
-                                        <constraint firstAttribute="trailing" secondItem="lVT-QY-8yn" secondAttribute="trailing" constant="8" id="fXS-H7-ukB"/>
                                         <constraint firstItem="lVT-QY-8yn" firstAttribute="leading" secondItem="YKq-jY-IE5" secondAttribute="leading" constant="8" id="gqD-NP-He4"/>
                                         <constraint firstAttribute="trailing" secondItem="lVT-QY-8yn" secondAttribute="trailing" constant="8" id="jJh-MZ-GMG"/>
-                                        <constraint firstItem="lVT-QY-8yn" firstAttribute="top" secondItem="YKq-jY-IE5" secondAttribute="top" constant="8" id="vrX-PX-dEd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -870,7 +733,7 @@
                             <outlet property="delegate" destination="B2c-HC-vsZ" id="gtZ-71-LL2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lecture Index" id="V6w-x7-uvh">
+                    <navigationItem key="navigationItem" title="Lectures" id="V6w-x7-uvh">
                         <barButtonItem key="leftBarButtonItem" image="Back.png" id="AVh-Dp-zWM">
                             <connections>
                                 <action selector="backButtonPressed:" destination="B2c-HC-vsZ" id="y6b-jt-SxS"/>
@@ -883,21 +746,106 @@
             </objects>
             <point key="canvasLocation" x="2233" y="528"/>
         </scene>
-        <!--Lecture Information-->
+        <!--Lecture Name-->
         <scene sceneID="RVG-vy-Gah">
             <objects>
-                <tableViewController storyboardIdentifier="LectureInformationTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4uI-Qa-AZW" customClass="LectureInformationTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="jBl-q0-cFd">
+                <tableViewController storyboardIdentifier="LectureTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4uI-Qa-AZW" customClass="LectureTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="jBl-q0-cFd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections/>
+                        <sections>
+                            <tableViewSection id="pcb-K3-Q8m">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RbA-L4-gzI">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RbA-L4-gzI" id="gfM-2I-UDT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUh-Uh-0aa">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pUh-Uh-0aa" secondAttribute="trailing" constant="8" id="hmd-r0-Zj2"/>
+                                                <constraint firstItem="pUh-Uh-0aa" firstAttribute="top" secondItem="gfM-2I-UDT" secondAttribute="top" constant="8" id="hxU-AC-SNe"/>
+                                                <constraint firstAttribute="bottom" secondItem="pUh-Uh-0aa" secondAttribute="bottom" constant="8" id="tCf-o8-E8s"/>
+                                                <constraint firstItem="pUh-Uh-0aa" firstAttribute="leading" secondItem="gfM-2I-UDT" secondAttribute="leading" constant="8" id="yXz-1N-D6I"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="K0X-ab-5Pf">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K0X-ab-5Pf" id="JQx-Lq-cZU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovy-iC-gUR">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ovy-iC-gUR" secondAttribute="trailing" constant="8" id="8JH-cd-tsP"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ovy-iC-gUR" secondAttribute="bottom" constant="8" id="FEd-ep-THS"/>
+                                                <constraint firstItem="Ovy-iC-gUR" firstAttribute="top" secondItem="JQx-Lq-cZU" secondAttribute="top" constant="8" id="FiE-tT-Dvt"/>
+                                                <constraint firstItem="Ovy-iC-gUR" firstAttribute="leading" secondItem="JQx-Lq-cZU" secondAttribute="leading" constant="8" id="ciH-I3-lXA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fG9-0P-XvS">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fG9-0P-XvS" id="HOq-Bf-XTL">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documents" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qn7-vm-s6q">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Qn7-vm-s6q" secondAttribute="trailing" constant="8" id="U6w-c9-WKK"/>
+                                                <constraint firstItem="Qn7-vm-s6q" firstAttribute="top" secondItem="HOq-Bf-XTL" secondAttribute="top" constant="8" id="UqF-5w-knL"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qn7-vm-s6q" secondAttribute="bottom" constant="8" id="n2I-ZX-FE2"/>
+                                                <constraint firstItem="Qn7-vm-s6q" firstAttribute="leading" secondItem="HOq-Bf-XTL" secondAttribute="leading" constant="8" id="vsg-Cx-eUu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MDW-jp-Uy3">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDW-jp-Uy3" id="kTq-Jh-nPj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us3-3d-M4E">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Us3-3d-M4E" secondAttribute="bottom" constant="8" id="40Z-3V-WCU"/>
+                                                <constraint firstAttribute="trailing" secondItem="Us3-3d-M4E" secondAttribute="trailing" constant="8" id="PKt-jD-8zW"/>
+                                                <constraint firstItem="Us3-3d-M4E" firstAttribute="top" secondItem="kTq-Jh-nPj" secondAttribute="top" constant="8" id="UnY-ku-dQ5"/>
+                                                <constraint firstItem="Us3-3d-M4E" firstAttribute="leading" secondItem="kTq-Jh-nPj" secondAttribute="leading" constant="8" id="ece-K3-Z1v"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="4uI-Qa-AZW" id="nGs-9S-OkL"/>
                             <outlet property="delegate" destination="4uI-Qa-AZW" id="ZmL-4A-BUp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lecture Information" id="3be-X2-IDD">
+                    <navigationItem key="navigationItem" title="Lecture Name" id="3be-X2-IDD">
                         <barButtonItem key="leftBarButtonItem" image="Back.png" id="ZdY-GJ-smv">
                             <connections>
                                 <action selector="backButtonPressed:" destination="4uI-Qa-AZW" id="BQf-id-rK3"/>
@@ -960,6 +908,220 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6j-9a-0ZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763" y="377"/>
+        </scene>
+        <!--[Subject][Number]-->
+        <scene sceneID="MiB-tN-OEZ">
+            <objects>
+                <tableViewController storyboardIdentifier="CourseTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g8t-Fb-y8x" customClass="CourseTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="gEs-Ss-Uxz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="qdB-pZ-56E">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="la0-sZ-MXo" customClass="CourseTableViewCell">
+                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="la0-sZ-MXo" id="d7O-89-RGi">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egz-NQ-dUc">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="egz-NQ-dUc" secondAttribute="bottom" constant="8" id="KWY-fU-nP1"/>
+                                                <constraint firstAttribute="trailing" secondItem="egz-NQ-dUc" secondAttribute="trailing" constant="8" id="TT6-nI-U8w"/>
+                                                <constraint firstItem="egz-NQ-dUc" firstAttribute="leading" secondItem="d7O-89-RGi" secondAttribute="leading" constant="8" id="eUe-VO-mI8"/>
+                                                <constraint firstItem="egz-NQ-dUc" firstAttribute="top" secondItem="d7O-89-RGi" secondAttribute="top" constant="8" id="ghT-Hf-dbY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="courseTitleLabel" destination="egz-NQ-dUc" id="pPX-zV-ZNb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sGh-Vi-DRo" customClass="CourseTableViewCell">
+                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sGh-Vi-DRo" id="5Az-2b-sKZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggp-Ub-fsj">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ggp-Ub-fsj" secondAttribute="trailing" constant="8" id="2ok-es-yF5"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ggp-Ub-fsj" secondAttribute="bottom" constant="8" id="Ok6-LG-Mc9"/>
+                                                <constraint firstItem="Ggp-Ub-fsj" firstAttribute="leading" secondItem="5Az-2b-sKZ" secondAttribute="leading" constant="8" id="b3w-Bn-hCQ"/>
+                                                <constraint firstItem="Ggp-Ub-fsj" firstAttribute="top" secondItem="5Az-2b-sKZ" secondAttribute="top" constant="8" id="eZK-t7-mFw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="courseTitleLabel" destination="Ggp-Ub-fsj" id="fry-BG-XT5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bRF-5m-5XC" customClass="CourseTableViewCell">
+                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRF-5m-5XC" id="dAs-g5-p3c">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B0-Dr-jON">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4B0-Dr-jON" firstAttribute="leading" secondItem="dAs-g5-p3c" secondAttribute="leading" constant="8" id="1bZ-yt-0HC"/>
+                                                <constraint firstAttribute="bottom" secondItem="4B0-Dr-jON" secondAttribute="bottom" constant="8" id="7QL-L3-wL1"/>
+                                                <constraint firstItem="4B0-Dr-jON" firstAttribute="top" secondItem="dAs-g5-p3c" secondAttribute="top" constant="8" id="VHW-f5-05q"/>
+                                                <constraint firstAttribute="trailing" secondItem="4B0-Dr-jON" secondAttribute="trailing" constant="8" id="iDt-tX-da0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="courseTitleLabel" destination="4B0-Dr-jON" id="lI2-Jw-VfN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ARA-0j-oGg" customClass="CourseTableViewCell">
+                                        <rect key="frame" x="0.0" y="160" width="320" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARA-0j-oGg" id="vEW-l4-cje">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capsules" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnV-UJ-JPT">
+                                                    <rect key="frame" x="8" y="8" width="304" height="32"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.035294117649999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hnV-UJ-JPT" firstAttribute="top" secondItem="vEW-l4-cje" secondAttribute="top" constant="8" id="8Ye-kN-nmN"/>
+                                                <constraint firstAttribute="bottom" secondItem="hnV-UJ-JPT" secondAttribute="bottom" constant="8" id="B7F-sH-DrP"/>
+                                                <constraint firstAttribute="trailing" secondItem="hnV-UJ-JPT" secondAttribute="trailing" constant="8" id="GCr-X1-oyz"/>
+                                                <constraint firstItem="hnV-UJ-JPT" firstAttribute="leading" secondItem="vEW-l4-cje" secondAttribute="leading" constant="8" id="Olw-K6-yVG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="courseTitleLabel" destination="hnV-UJ-JPT" id="uwo-DN-qJ8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="g8t-Fb-y8x" id="W2Z-1J-WzQ"/>
+                            <outlet property="delegate" destination="g8t-Fb-y8x" id="Nlt-fk-Wyr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="[Subject][Number]" id="hHG-3V-dwF">
+                        <barButtonItem key="leftBarButtonItem" image="Back.png" id="ujC-Ef-1Zu">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="g8t-Fb-y8x" id="y9Z-4e-Jcu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="Bxe-JT-D7k"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMQ-zs-ZXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="164"/>
+        </scene>
+        <!--Comments-->
+        <scene sceneID="zso-dB-OAx">
+            <objects>
+                <tableViewController storyboardIdentifier="LectureCommentsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AYC-dv-lNQ" customClass="LectureCommentsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="e8K-A3-TEz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="AYC-dv-lNQ" id="LzS-ZD-0Ol"/>
+                            <outlet property="delegate" destination="AYC-dv-lNQ" id="MDf-Oz-Gpf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Comments" id="J38-wY-2qb">
+                        <barButtonItem key="leftBarButtonItem" image="Back.png" id="BA6-wO-hT9">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="AYC-dv-lNQ" id="IeE-CF-C5a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfw-OX-WH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2962" y="528"/>
+        </scene>
+        <!--Documents-->
+        <scene sceneID="4ae-pG-Z7J">
+            <objects>
+                <tableViewController storyboardIdentifier="LectureDocumentsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HOo-ii-uqL" customClass="LectureDocumentsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zsc-cU-6Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="HOo-ii-uqL" id="Vgh-ki-Khk"/>
+                            <outlet property="delegate" destination="HOo-ii-uqL" id="ash-pR-4m7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Documents" id="CYB-6k-iDH">
+                        <barButtonItem key="leftBarButtonItem" image="Back.png" id="cYT-kj-wOU">
+                            <connections>
+                                <action selector="backButtonpressed:" destination="HOo-ii-uqL" id="0hw-LT-8hv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnt-3h-oub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032" y="628"/>
+        </scene>
+        <!--Videos-->
+        <scene sceneID="Tmo-Fi-jNh">
+            <objects>
+                <tableViewController storyboardIdentifier="LectureVideosTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fRY-sV-LEt" customClass="LectureVideosTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" sectionHeaderHeight="22" sectionFooterHeight="22" id="dkp-Q7-iIn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="fRY-sV-LEt" id="h8e-SR-uVG"/>
+                            <outlet property="delegate" destination="fRY-sV-LEt" id="du8-2V-qlk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Videos" id="skc-aM-P4V">
+                        <barButtonItem key="leftBarButtonItem" image="Back.png" id="adX-pV-Ylm">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="fRY-sV-LEt" id="JEK-HL-llJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJk-bW-m7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3109" y="730"/>
         </scene>
     </scenes>
     <resources>

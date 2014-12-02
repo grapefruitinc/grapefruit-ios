@@ -11,13 +11,11 @@
 #import "CapsuleNameTableViewCell.h"
 
 //#import "CapsuleTableViewController.h"
-#import "LectureIndexTableViewController.h"
+#import "CapsuleLecturesTableViewController.h"
 
-@interface CourseCapsulesTableViewController() <ApiManagerDelegate>
+@interface CourseCapsulesTableViewController()
 
 - (IBAction)backButtonPressed:(id)sender;
-
-@property (strong, nonatomic) ApiManager *sharedApiManager;
 
 @end
 
@@ -63,10 +61,10 @@
     NSDictionary *capsule = self.courseCapsules[indexPath.row][@"capsule"];
     NSInteger capsuleID = [capsule[@"id"] integerValue];
     
-    LectureIndexTableViewController *lectureIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LectureIndexTableViewController"];
-    lectureIndexTableViewController.courseID = self.courseID;
-    lectureIndexTableViewController.capsuleID = capsuleID;
-    [self.navigationController showViewController:lectureIndexTableViewController sender:self];
+    CapsuleLecturesTableViewController *capsuleLecturesTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CapsuleLecturesTableViewController"];
+    capsuleLecturesTableViewController.courseID = self.courseID;
+    capsuleLecturesTableViewController.capsuleID = capsuleID;
+    [self.navigationController showViewController:capsuleLecturesTableViewController sender:self];
 }
 
 - (IBAction)backButtonPressed:(id)sender

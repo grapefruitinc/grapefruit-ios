@@ -101,7 +101,7 @@ NSString * const GrapefruitErrorDomain = @"Grapefruit";
 
 - (void)editAccount:(NSString *)email password:(NSString *)password name:(NSString *)name
 {
-    self.apiCall = @"sign_up";
+    self.apiCall = @"edit_account";
     NSURL *editAccountUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"edit_account"]];
     NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
     NSMutableDictionary *userDictionary = [NSMutableDictionary new];
