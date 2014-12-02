@@ -44,6 +44,15 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.emailTextField.text = @"";
+    self.passwordTextField.text = @"";
+    self.confirmPasswordTextField.text = @"";
+    self.nameTextField.text = @"";
+}
+
 #pragma mark - TextField Delegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

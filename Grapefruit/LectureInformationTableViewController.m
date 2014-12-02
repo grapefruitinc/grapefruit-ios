@@ -13,8 +13,7 @@
 
 - (IBAction)backButtonPressed:(id)sender;
 
-@property (strong, nonatomic) ApiManager *sharedApiManager;
-@property (strong, nonatomic) NSDictionary *lectureInformation;
+@property (strong, nonatomic) ApiManager *apiManager;
 
 @end
 
@@ -26,22 +25,29 @@
     self.lectureInformation = [NSDictionary new];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    self.sharedApiManager = [ApiManager sharedInstance];
-    self.sharedApiManager.delegate = self;
-    [self.sharedApiManager getLectureInformation:self.courseID capsule:self.capsuleID lecture:self.lectureID];
+    self.apiManager = [ApiManager sharedInstance];
+    self.apiManager.delegate = self;
+    
+    // TODO: Display loading spinner:
+    
+    [self.apiManager getLectureInformation:self.courseID capsule:self.capsuleID lecture:self.lectureID];
+    self.tableView.userInteractionEnabled = NO;
 }
 
 #pragma mark - ApiManager Delegate
 
 - (void)getLectureInformationSuccessful:(NSDictionary *)lectureInformation
 {
+    NSLog(@"%@", lectureInformation);
     self.lectureInformation = lectureInformation;
-    // TODO: Do stuff.
+    self.tableView.userInteractionEnabled = YES;
+    
+    // TODO: Dismiss loading spinner:
 }
 
 - (void)getLectureInformationFailedWithError:(NSError *)error
 {
-    
+    NSLog(@"%@", error.localizedDescription);
 }
 
 #pragma mark - TableView Data Source

@@ -226,8 +226,8 @@ NSString * const GrapefruitErrorDomain = @"Grapefruit";
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     // TEST:
-    NSString *dataString = [[NSString alloc] initWithData:[self.mutableData copy] encoding:NSStringEncodingConversionAllowLossy];
-    NSLog(@"%@", dataString);
+//    NSString *dataString = [[NSString alloc] initWithData:[self.mutableData copy] encoding:NSStringEncodingConversionAllowLossy];
+//    NSLog(@"%@", dataString);
     
     NSObject *response = [NSJSONSerialization JSONObjectWithData:[self.mutableData copy] options:NSJSONReadingAllowFragments error:nil];
     

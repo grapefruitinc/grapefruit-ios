@@ -8,7 +8,7 @@
 
 #import "CourseIndexTableViewController.h"
 #import "CourseTableViewCell.h"
-#import "CourseInformationTableViewController.h"
+#import "CourseTableViewController.h"
 #import "AppDelegate.h"
 #import "ApiManager.h"
 #import "MenuTableViewController.h"
@@ -91,8 +91,9 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     // TODO: Pull up correct course info.
-    CourseInformationTableViewController *courseInformationTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseInformationTableViewController"];
+    CourseTableViewController *courseInformationTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseTableViewController"];
     courseInformationTableViewController.courseID = [self.courses[indexPath.row][@"id"] integerValue];
+    courseInformationTableViewController.courseInformation = self.courses[indexPath.row];
     [self.navigationController pushViewController:courseInformationTableViewController animated:YES];
 }
 

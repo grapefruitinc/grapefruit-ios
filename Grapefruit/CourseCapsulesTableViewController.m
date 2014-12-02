@@ -1,50 +1,33 @@
 //
-//  CapsuleIndexTableViewController.m
+//  CourseCapsulesTableViewController.m
 //  Grapefruit
 //
 //  Created by Logan Shire on 11/11/14.
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
-#import "CapsuleIndexTableViewController.h"
+#import "CourseCapsulesTableViewController.h"
 #import "ApiManager.h"
 #import "CapsuleNameTableViewCell.h"
+
+//#import "CapsuleTableViewController.h"
 #import "LectureIndexTableViewController.h"
 
-@interface CapsuleIndexTableViewController() <ApiManagerDelegate>
+@interface CourseCapsulesTableViewController() <ApiManagerDelegate>
 
 - (IBAction)backButtonPressed:(id)sender;
 
 @property (strong, nonatomic) ApiManager *sharedApiManager;
-@property (strong, nonatomic) NSArray *capsules;
 
 @end
 
-@implementation CapsuleIndexTableViewController
+@implementation CourseCapsulesTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.capsules = [NSArray new];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    self.sharedApiManager = [ApiManager sharedInstance];
-    self.sharedApiManager.delegate = self;
-    [self.sharedApiManager getCapsuleIndex:self.courseID];
-}
-
-#pragma mark - ApiManager Delegate
-
-- (void)getCapsuleIndexSuccessful:(NSArray *)capsuleIndex
-{
-    self.capsules = capsuleIndex;
-    [self.tableView reloadData];
-}
-
-- (void)getCapsuleInformationFailedWithError:(NSError *)error
-{
-    
 }
 
 #pragma mark - TableView Data Source
@@ -56,7 +39,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.capsules.count;
+    return self.courseCapsules.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,7 +48,7 @@
     
     CapsuleNameTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    NSDictionary *capsule = self.capsules[indexPath.row];
+    NSDictionary *capsule = self.courseCapsules[indexPath.row][@"capsule"];
     cell.capsuleNameLabel.text = capsule[@"name"];
     
     return cell;
@@ -77,7 +60,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *capsule = self.capsules[indexPath.row];
+    NSDictionary *capsule = self.courseCapsules[indexPath.row][@"capsule"];
     NSInteger capsuleID = [capsule[@"id"] integerValue];
     
     LectureIndexTableViewController *lectureIndexTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LectureIndexTableViewController"];

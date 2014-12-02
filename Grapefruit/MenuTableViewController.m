@@ -74,7 +74,7 @@
 - (void)signOutSuccessful
 {
     [self.delegate dismissViewControllerAnimated:YES completion:nil];
-    [self.delegate popViewControllerAnimated:YES];
+    [((UIViewController *)self.delegate).navigationController popViewControllerAnimated:YES];
 }
 
 - (void)signOutFailedWithError:(NSError *)error

@@ -13,5 +13,6 @@
 @property (nonatomic) NSInteger courseID;
 @property (nonatomic) NSInteger capsuleID;
 @property (nonatomic) NSInteger lectureID;
+@property (strong, nonatomic) NSDictionary *lectureInformation;
 
 @end

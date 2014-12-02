@@ -1,5 +1,5 @@
 //
-//  CapsuleIndexTableViewController.h
+//  CourseCapsulesTableViewController.h
 //  Grapefruit
 //
 //  Created by Logan Shire on 11/11/14.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CapsuleIndexTableViewController : UITableViewController
+@interface CourseCapsulesTableViewController : UITableViewController
 
 @property (nonatomic) NSInteger courseID;
+@property (strong, nonatomic) NSArray *courseCapsules;
 
 @end

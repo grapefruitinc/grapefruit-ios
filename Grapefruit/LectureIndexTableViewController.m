@@ -11,12 +11,12 @@
 #import "LectureNameTableViewCell.h"
 #import "LectureInformationTableViewController.h"
 
-@interface LectureIndexTableViewController ()
+@interface LectureIndexTableViewController () <ApiManagerDelegate>
 
 - (IBAction)backButtonPressed:(id)sender;
 
-@property (strong, nonatomic) ApiManager *sharedApiManager;
-@property (strong, nonatomic) NSArray *lectures;
+@property (strong, nonatomic) NSArray *capsuleLectures;
+@property (strong, nonatomic) ApiManager *apiManager;
 
 @end
 
@@ -25,25 +25,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.lectures = [NSArray new];
+    self.title = @"Lectures";
+    
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    self.sharedApiManager = [ApiManager sharedInstance];
-    self.sharedApiManager.delegate = self;
-    [self.sharedApiManager getCapsuleInformation:self.courseID capsule:self.capsuleID];
+    self.capsuleLectures = [NSArray new];
+    self.apiManager = [ApiManager sharedInstance];
+    self.apiManager.delegate = self;
+    
+    // TODO: Display loading spinner:
+    
+    [self.apiManager getCapsuleInformation:self.courseID capsule:self.capsuleID];
 }
 
 #pragma mark - ApiManager Delegate
 
 - (void)getCapsuleInformationSuccessful:(NSDictionary *)capsuleInformation
 {
-    self.lectures = capsuleInformation[@"lectures"];
+    self.capsuleLectures = capsuleInformation[@"lectures"];
     [self.tableView reloadData];
-}
-
-- (void)getCapsuleInformationFailedWithError:(NSError *)error
-{
     
+    // TODO: Dismiss loading spinner:
 }
 
 #pragma mark - TableView Data Source
@@ -55,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.lectures.count;
+    return self.capsuleLectures.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,7 +66,7 @@
     
     LectureNameTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    NSDictionary *lecture = self.lectures[indexPath.row][@"lecture"];
+    NSDictionary *lecture = self.capsuleLectures[indexPath.row][@"lecture"];
     cell.lectureNameLabel.text = lecture[@"name"];
     
     return cell;
@@ -76,10 +78,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    NSDictionary *lecture = self.capsuleLectures[indexPath.row][@"lecture"];
+    
     LectureInformationTableViewController *lectureInformationTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LectureInformationTableViewController"];
     lectureInformationTableViewController.courseID = self.courseID;
     lectureInformationTableViewController.capsuleID = self.capsuleID;
-    lectureInformationTableViewController.lectureID = [self.lectures[indexPath.row][@"lecture"][@"id"] integerValue];
+    lectureInformationTableViewController.lectureID = [lecture[@"id"] integerValue];
     [self.navigationController showViewController:lectureInformationTableViewController sender:self];
 }
 

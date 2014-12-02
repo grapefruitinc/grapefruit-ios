@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CourseInformationTableViewController : UITableViewController
+@interface CourseTableViewController : UITableViewController
 
 @property (nonatomic) NSInteger courseID;
+@property (strong, nonatomic) NSDictionary *courseInformation;
 
 @end
