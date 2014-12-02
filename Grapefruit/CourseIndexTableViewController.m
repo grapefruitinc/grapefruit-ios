@@ -11,9 +11,11 @@
 #import "CourseInformationTableViewController.h"
 #import "AppDelegate.h"
 #import "ApiManager.h"
+#import "MenuTableViewController.h"
 
 @interface CourseIndexTableViewController () <ApiManagerDelegate>
 
+- (IBAction)menuButtonPressed:(id)sender;
 @property (strong, nonatomic) ApiManager *sharedApiManager;
 @property (strong, nonatomic) NSArray *courses;
 
@@ -92,6 +94,14 @@
     CourseInformationTableViewController *courseInformationTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CourseInformationTableViewController"];
     courseInformationTableViewController.courseID = [self.courses[indexPath.row][@"id"] integerValue];
     [self.navigationController pushViewController:courseInformationTableViewController animated:YES];
+}
+
+- (IBAction)menuButtonPressed:(id)sender {
+    
+    MenuTableViewController *menuTableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuTableViewController"];
+    menuTableViewController.delegate = self;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:menuTableViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

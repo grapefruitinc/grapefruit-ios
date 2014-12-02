@@ -6,36 +6,32 @@
 //  Copyright (c) 2014 Logan Shire. All rights reserved.
 //
 
+#import "Common.h"
 #import "AppDelegate.h"
-#import "SideMenuTableViewController.h"
+#import "MenuTableViewController.h"
 #import "SignUpTableViewController.h"
 #import "SignInTableViewController.h"
-//#import "HomeTableViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xCD4544)];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+    @{
+        NSFontAttributeName:[UIFont fontWithName:@"AvenirNext-Bold" size:20.0],
+        NSForegroundColorAttributeName:[UIColor whiteColor]
+    }];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     // Get the storyboard.
     // TODO: Check if iPad or iPhone
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
-    // Instantiate the view controllers.
-    SideMenuTableViewController *sideMenuTableViewController =
-    [storyboard instantiateViewControllerWithIdentifier:@"SideMenuTableViewController"];
-    
     // Create the navigaiton controller.
     UINavigationController *mainNavigationController =
     [storyboard instantiateViewControllerWithIdentifier:@"MainNavigationController"];
-    
-    // Create side menu controller
-//    self.sideMenuViewController =
-//    [[RESideMenu alloc] initWithContentViewController:mainNavigationController
-//                               leftMenuViewController:sideMenuTableViewController
-//                              rightMenuViewController:nil];
-//    self.sideMenuViewController.view.backgroundColor = [UIColor ]
     
     // Make it a root controller
     self.window.rootViewController = mainNavigationController;

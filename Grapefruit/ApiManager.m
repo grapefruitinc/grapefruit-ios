@@ -10,6 +10,7 @@
 #import "Common.h"
 
 #define BASE_URL "http://localhost:3000/api/v1"
+NSString * const GrapefruitErrorDomain = @"Grapefruit";
 
 @interface ApiManager () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
@@ -78,12 +79,14 @@
 
 #pragma mark - Public Methods
 
+// Account
+
 - (void)signUpWithEmail:(NSString *)email password:(NSString *)password name:(NSString *)name
 {
     self.apiCall = @"sign_up";
     NSURL *signUpUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_up"]];
-    NSDictionary *postDictionary = @{@"user":@{@"email":email, @"password":password,@"name":name}};
-    NSURLRequest *request = [self requestWithURL:signUpUrl method:@"POST" header:nil body:postDictionary];
+    NSDictionary *bodyDictionary = @{@"user":@{@"email":email, @"password":password,@"name":name}};
+    NSURLRequest *request = [self requestWithURL:signUpUrl method:@"POST" header:nil body:bodyDictionary];
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
@@ -91,8 +94,28 @@
 {
     self.apiCall = @"sign_in";
     NSURL *signInUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"sign_in"]];
-    NSDictionary *postDictionary = @{@"user":@{@"email":email, @"password":password}};
-    NSURLRequest *request = [self requestWithURL:signInUrl method:@"POST" header:nil body:postDictionary];
+    NSDictionary *bodyDictionary = @{@"user":@{@"email":email, @"password":password}};
+    NSURLRequest *request = [self requestWithURL:signInUrl method:@"POST" header:nil body:bodyDictionary];
+    [NSURLConnection connectionWithRequest:request delegate:self];
+}
+
+- (void)editAccount:(NSString *)email password:(NSString *)password name:(NSString *)name
+{
+    self.apiCall = @"sign_up";
+    NSURL *editAccountUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%@", BASE_URL, @"edit_account"]];
+    NSDictionary *headerDictionary = @{@"user-email":self.email, @"authentication-token":self.authenticationToken};
+    NSMutableDictionary *userDictionary = [NSMutableDictionary new];
+    if (email) {
+        userDictionary[@"email"] = email;
+    }
+    if (password) {
+        userDictionary[@"password"] = password;
+    }
+    if (name) {
+        userDictionary[@"name"] = name;
+    }
+    NSDictionary *bodyDictionary = @{@"user":[userDictionary copy]};
+    NSURLRequest *request = [self requestWithURL:editAccountUrl method:@"PUT" header:headerDictionary body:bodyDictionary];
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
@@ -104,6 +127,8 @@
     NSURLRequest *request = [self requestWithURL:signOutUrl method:@"DELETE" header:headerDictionary body:nil];
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
+
+// Courses
 
 - (void)getCourseIndex
 {
@@ -162,6 +187,10 @@
     {
         [self.delegate signInFailedWithError:error];
     }
+    else if ([self.apiCall isEqualToString:@"edit_account"])
+    {
+        [self.delegate editAccountFailedWithError:error];
+    }
     else if ([self.apiCall isEqualToString:@"sign_out"])
     {
         [self.delegate signOutFailedWithError:error];
@@ -217,6 +246,10 @@
             {
                 [self.delegate signInFailedWithError:error];
             }
+            else if ([self.apiCall isEqualToString:@"edit_account"])
+            {
+                [self.delegate editAccountFailedWithError:error];
+            }
             else if ([self.apiCall isEqualToString:@"sign_out"])
             {
                 [self.delegate signOutFailedWithError:error];
@@ -266,6 +299,16 @@
         self.authenticationToken = responseDictionary[@"authentication_token"];
         [self save];
         [self.delegate signInSuccessful];
+    }
+    else if ([self.apiCall isEqualToString:@"edit_account"])
+    {
+        NSDictionary *responseDictionary = ((NSDictionary *)response);
+        self.userID = [responseDictionary[@"id"] integerValue];
+        self.email = responseDictionary[@"email"];
+        self.name = responseDictionary[@"name"];
+        self.authenticationToken = responseDictionary[@"authentication_token"];
+        [self save];
+        [self.delegate editAccountSuccessful];
     }
     else if ([self.apiCall isEqualToString:@"sign_out"])
     {

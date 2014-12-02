@@ -15,6 +15,8 @@
 - (void)signUpFailedWithError:(NSError *)error;
 - (void)signInSuccessful;
 - (void)signInFailedWithError:(NSError *)error;
+- (void)editAccountSuccessful;
+- (void)editAccountFailedWithError:(NSError *)error;
 - (void)signOutSuccessful;
 - (void)signOutFailedWithError:(NSError *)error;
 - (void)getCourseIndexSuccessful:(NSArray *)courseIndex;
@@ -42,6 +44,7 @@
 + (instancetype)sharedInstance;
 - (void)signUpWithEmail:(NSString *)email password:(NSString *)password name:(NSString *)name;
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;
+- (void)editAccount:(NSString *)email password:(NSString *)password name:(NSString *)name;
 - (void)signOut;
 - (void)getCourseIndex;
 - (void)getCourseInformation:(NSInteger)courseID;
